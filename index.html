@@ -1,279 +1,206 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Company | Home</title>
-  <style>
-    :root{
-      --ink:#1f2a44;
-      --muted:#5b667a;
-      --bg:#f6f7fb;
-      --card:#ffffff;
-      --accent:#c8744a;     /* button color */
-      --accent2:#e9b39a;    /* soft accent */
-      --line:#e6e8ef;
-      --max:1120px;
-      --radius:16px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; color:var(--ink); background:var(--bg)}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
-
-    /* NAV */
-    .navWrap{position:sticky;top:0;z-index:10;background:rgba(246,247,251,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:14px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
-    .brand img{height:34px;width:auto;display:block}
-    .menu{display:flex;align-items:center;gap:18px;font-weight:600;color:var(--muted)}
-    .dd{position:relative}
-    .dd > button{
-      border:0;background:transparent;font:inherit;color:inherit;
-      padding:10px 8px;border-radius:10px;cursor:pointer;
-    }
-    .dd:hover > button{background:#fff}
-    .panel{
-      display:none;position:absolute;top:44px;left:0;min-width:240px;
-      background:var(--card);border:1px solid var(--line);border-radius:14px;
-      box-shadow:0 12px 30px rgba(0,0,0,.08);padding:10px;
-    }
-    .dd:hover .panel{display:block}
-    .panel a{display:block;padding:10px 10px;border-radius:10px;color:var(--ink);font-weight:650}
-    .panel a:hover{background:var(--bg)}
-
-    /* HERO */
-    .hero{
-      margin:18px auto 0;
-      background:linear-gradient(135deg, #d07a52, #b85d42);
-      border-radius:var(--radius);
-      overflow:hidden;
-    }
-    .heroInner{display:grid;grid-template-columns:1.15fr .85fr;gap:0}
-    .heroText{padding:42px 34px;color:#fff}
-    .heroText h1{margin:0 0 12px;font-size:48px;line-height:1.02}
-    .heroText p{margin:0 0 18px;max-width:48ch;opacity:.92}
-    .btn{
-      display:inline-block;background:#fff;color:#2b2b2b;
-      padding:12px 16px;border-radius:12px;font-weight:800;
-    }
-    .heroMedia{
-      background:url("assets/hero.jpg") center/cover no-repeat;
-      min-height:280px;
-      clip-path:polygon(14% 0, 100% 0, 100% 100%, 0 100%);
-    }
-    @media (max-width:900px){
-      .heroInner{grid-template-columns:1fr}
-      .heroMedia{clip-path:none;min-height:220px}
-      .heroText h1{font-size:38px}
-    }
-
-    /* SECTIONS */
-    section{padding:34px 0}
-    .sectionTitle{font-size:34px;margin:0 0 10px}
-    .lead{color:var(--muted);margin:0;max-width:80ch}
-
-    .grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
-    .stack{display:flex;flex-direction:column;gap:12px}
-    .serveItem{
-      display:flex;align-items:center;justify-content:space-between;gap:14px;
-      padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff;
-    }
-    .serveItem strong{display:block}
-    .serveItem small{color:var(--muted)}
-    .linkBtn{
-      padding:10px 12px;border-radius:12px;border:1px solid var(--line);
-      font-weight:800;background:var(--bg);
-    }
-
-    .iconGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .iconTile{padding:16px;border-radius:16px;border:1px solid var(--line);background:#fff}
-    .iconTile h4{margin:8px 0 0}
-    .iconTile p{margin:6px 0 0;color:var(--muted);font-size:14px}
-    @media (max-width:900px){ .grid2{grid-template-columns:1fr} }
-    @media (max-width:720px){ .iconGrid{grid-template-columns:1fr} }
-
-    /* CTA + FOOTER */
-    .cta{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;align-items:center;justify-content:space-between;gap:14px}
-    .cta h3{margin:0}
-    .cta p{margin:6px 0 0;color:var(--muted)}
-    .cta .btn2{background:var(--accent);color:#fff;padding:12px 16px;border-radius:12px;font-weight:900}
-    footer{padding:26px 0;color:var(--muted)}
-    .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  </style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Avenza Life Sciences — Home</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
-
 <body>
-  <!-- NAV -->
-  <div class="navWrap">
-    <div class="container">
-      <div class="nav">
-        <a class="brand" href="index.html">
-          <img src="assets/logo.png" alt="Logo" />
-          <span>Your Company</span>
-        </a>
 
-        <div class="menu">
-          <a href="index.html">Home</a>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Avenza logo"/>
+      <span>Avenza Life Sciences</span>
+    </a>
 
-          <div class="dd">
-            <button type="button">About ▾</button>
-            <div class="panel">
-              <a href="pages/about/who-we-are.html">Who We Are</a>
-            </div>
-          </div>
+    <button class="burger" id="burger" aria-label="Open menu">☰</button>
 
-          <div class="dd">
-            <button type="button">Who We Serve ▾</button>
-            <div class="panel">
-              <a href="pages/who-we-serve/sponsors.html">Sponsors</a>
-              <a href="pages/who-we-serve/physicians.html">Physicians</a>
-              <a href="pages/who-we-serve/cro.html">CRO</a>
-              <a href="pages/who-we-serve/patients.html">Patients</a>
-            </div>
-          </div>
-
-          <div class="dd">
-            <button type="button">Focus Areas ▾</button>
-            <div class="panel">
-              <a href="pages/focus-areas/gastroenterology.html">Gastroenterology Research</a>
-              <a href="pages/focus-areas/dermatology.html">Dermatology Research</a>
-              <a href="pages/focus-areas/urology.html">Urology Research</a>
-              <a href="pages/focus-areas/oncology.html">Oncology</a>
-              <a href="pages/focus-areas/hematology.html">Hematology</a>
-            </div>
-          </div>
+    <ul class="menu">
+      <li>
+        <button data-dd>About ▾</button>
+        <div class="dropdown">
+          <a href="about.html">Who We Are</a>
         </div>
+      </li>
 
-      </div>
-    </div>
+      <li>
+        <button data-dd>Who We Serve ▾</button>
+        <div class="dropdown">
+          <a href="who-we-serve.html#sponsors">Sponsors</a>
+          <a href="who-we-serve.html#physicians">Physicians</a>
+          <a href="who-we-serve.html#cro">CRO</a>
+          <a href="who-we-serve.html#patients">Patients</a>
+        </div>
+      </li>
+
+      <li>
+        <button data-dd>Focus Areas ▾</button>
+        <div class="dropdown">
+          <a href="focus-areas.html#gi">Gastroenterology Research</a>
+          <a href="focus-areas.html#derm">Dermatology Research</a>
+          <a href="focus-areas.html#uro">Urology Research</a>
+          <a href="focus-areas.html#onc">Oncology</a>
+          <a href="focus-areas.html#heme">Hematology</a>
+        </div>
+      </li>
+
+      <li><a class="ctaBtn" href="contact.html">Contact</a></li>
+    </ul>
   </div>
 
+  <div class="mobilePanel" id="mobilePanel">
+    <a href="about.html">About — Who We Are</a>
+
+    <a href="who-we-serve.html">Who We Serve</a>
+    <a class="sub" href="who-we-serve.html#sponsors">Sponsors</a>
+    <a class="sub" href="who-we-serve.html#physicians">Physicians</a>
+    <a class="sub" href="who-we-serve.html#cro">CRO</a>
+    <a class="sub" href="who-we-serve.html#patients">Patients</a>
+
+    <a href="focus-areas.html">Focus Areas</a>
+    <a class="sub" href="focus-areas.html#gi">Gastroenterology Research</a>
+    <a class="sub" href="focus-areas.html#derm">Dermatology Research</a>
+    <a class="sub" href="focus-areas.html#uro">Urology Research</a>
+    <a class="sub" href="focus-areas.html#onc">Oncology</a>
+    <a class="sub" href="focus-areas.html#heme">Hematology</a>
+
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<main>
   <!-- HERO -->
-  <div class="container">
-    <div class="hero">
-      <div class="heroInner">
-        <div class="heroText">
-          <h1>Unifying<br/>Research and<br/>Care</h1>
-          <p>Clinical trials at the point of care.</p>
-          <!-- Learn More goes to About -> Who We Are -->
-          <a class="btn" href="pages/about/who-we-are.html">LEARN MORE</a>
-        </div>
-        <div class="heroMedia" aria-label="Hero image"></div>
+  <section class="hero">
+    <div class="container heroInner">
+      <div>
+        <h1>Unifying Research and Care</h1>
+        <p>Clinical trials at the point of care.</p>
+        <a class="learn" href="about.html">Learn More</a>
+      </div>
+      <div class="heroMedia">
+        <!-- Optional: upload assets/hero.jpg -->
+        <img src="assets/hero.jpg" alt="" onerror="this.remove(); this.parentElement.innerHTML='Hero image placeholder';"/>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- SECTION: Improving Patient Outcomes -->
-  <section>
-    <div class="container">
-      <div class="grid2">
-        <div class="card">
-          <h2 class="sectionTitle">Improving Patient Outcomes at the Point of Care</h2>
-          <p class="lead">
-            Put your home page paragraph here (you’ll send it). This section is the “intro text” area.
-          </p>
-        </div>
+  <!-- WHO WE SERVE PREVIEW -->
+  <section class="section">
+    <div class="container split">
+      <div>
+        <h2>Improving Patient Outcomes at the Point of Care</h2>
+        <p>
+          By bringing clinical trials into local physician practices, we help patients access new treatment options
+          without leaving the care environment they trust. (Replace text later.)
+        </p>
+        <a class="learn" href="who-we-serve.html" style="background:transparent;border:2px solid var(--brand);color:var(--brand)">Who We Serve</a>
+      </div>
 
-        <div class="card">
-          <div class="stack">
-            <div class="serveItem">
-              <div>
-                <strong>Sponsors</strong>
-                <small>Learn more</small>
-              </div>
-              <a class="linkBtn" href="pages/who-we-serve/sponsors.html">LEARN MORE</a>
-            </div>
-
-            <div class="serveItem">
-              <div>
-                <strong>Physicians</strong>
-                <small>Learn more</small>
-              </div>
-              <a class="linkBtn" href="pages/who-we-serve/physicians.html">LEARN MORE</a>
-            </div>
-
-            <div class="serveItem">
-              <div>
-                <strong>CRO</strong>
-                <small>Learn more</small>
-              </div>
-              <a class="linkBtn" href="pages/who-we-serve/cro.html">LEARN MORE</a>
-            </div>
-
-            <div class="serveItem">
-              <div>
-                <strong>Patients</strong>
-                <small>Learn more</small>
-              </div>
-              <a class="linkBtn" href="pages/who-we-serve/patients.html">LEARN MORE</a>
+      <div class="sideList">
+        <div class="sideItem">
+          <div class="left">
+            <div class="icon">S</div>
+            <div>
+              <div><strong>Sponsors</strong></div>
+              <div class="small">Research partnerships that drive results.</div>
             </div>
           </div>
+          <a class="link" href="who-we-serve.html#sponsors">Learn More</a>
+        </div>
+
+        <div class="sideItem">
+          <div class="left">
+            <div class="icon">P</div>
+            <div>
+              <div><strong>Physicians</strong></div>
+              <div class="small">Enhanced care through research.</div>
+            </div>
+          </div>
+          <a class="link" href="who-we-serve.html#physicians">Learn More</a>
+        </div>
+
+        <div class="sideItem">
+          <div class="left">
+            <div class="icon">C</div>
+            <div>
+              <div><strong>CRO</strong></div>
+              <div class="small">Tech-enabled, site-ready operations.</div>
+            </div>
+          </div>
+          <a class="link" href="who-we-serve.html#cro">Learn More</a>
+        </div>
+
+        <div class="sideItem">
+          <div class="left">
+            <div class="icon">Pt</div>
+            <div>
+              <div><strong>Patients</strong></div>
+              <div class="small">Access to new therapies.</div>
+            </div>
+          </div>
+          <a class="link" href="who-we-serve.html#patients">Learn More</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: Focus Areas -->
-  <section>
+  <!-- FOCUS AREAS PREVIEW -->
+  <section class="section" style="background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
     <div class="container">
-      <div class="card">
-        <h2 class="sectionTitle">Our Focus Areas</h2>
-        <p class="lead">Add your focus area description line here.</p>
+      <h2>Our Focus Areas</h2>
+      <p>We’re dedicated to expanding opportunities for patients and providers (replace later).</p>
 
-        <div style="height:16px"></div>
-
-        <div class="iconGrid">
-          <a class="iconTile" href="pages/focus-areas/gastroenterology.html">
-            <h4>Gastroenterology Research</h4>
-            <p>Learn more</p>
-          </a>
-          <a class="iconTile" href="pages/focus-areas/dermatology.html">
-            <h4>Dermatology Research</h4>
-            <p>Learn more</p>
-          </a>
-          <a class="iconTile" href="pages/focus-areas/urology.html">
-            <h4>Urology Research</h4>
-            <p>Learn more</p>
-          </a>
-          <a class="iconTile" href="pages/focus-areas/oncology.html">
-            <h4>Oncology</h4>
-            <p>Learn more</p>
-          </a>
-          <a class="iconTile" href="pages/focus-areas/hematology.html">
-            <h4>Hematology</h4>
-            <p>Learn more</p>
-          </a>
-        </div>
+      <div class="grid">
+        <div class="card"><h3>Gastroenterology Research</h3><a class="learnMore" href="focus-areas.html#gi">Learn More →</a></div>
+        <div class="card"><h3>Dermatology Research</h3><a class="learnMore" href="focus-areas.html#derm">Learn More →</a></div>
+        <div class="card"><h3>Urology Research</h3><a class="learnMore" href="focus-areas.html#uro">Learn More →</a></div>
+        <div class="card"><h3>Oncology</h3><a class="learnMore" href="focus-areas.html#onc">Learn More →</a></div>
+        <div class="card"><h3>Hematology</h3><a class="learnMore" href="focus-areas.html#heme">Learn More →</a></div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section>
-    <div class="container">
-      <div class="cta">
-        <div>
-          <h3>Interested in learning more?</h3>
-          <p>Connect with us to explore research partnerships.</p>
-        </div>
-        <a class="btn2" href="pages/about/who-we-are.html">CONTACT US</a>
+  <section class="banner">
+    <div class="container bannerInner">
+      <div>
+        <h3>Interested in learning more?</h3>
+        <p>Connect with us to explore research partnerships.</p>
       </div>
+      <a class="ctaBtn" href="contact.html">Contact Us</a>
     </div>
   </section>
+</main>
 
-  <footer>
-    <div class="container">
-      <div class="foot">
-        <div>© <span id="yr"></span> Your Company. All rights reserved.</div>
-        <div><a href="#">Privacy Policy</a></div>
+<footer>
+  <div class="container foot">
+    <div>
+      <div class="brand" style="color:#fff">
+        <img src="assets/logo.png" alt="Avenza logo"/>
+        <span>Avenza Life Sciences</span>
       </div>
+      <p style="color:#cbd6e8;max-width:44ch">Short footer description (replace later).</p>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById("yr").textContent = new Date().getFullYear();
-  </script>
+    <div>
+      <h4 style="margin:0 0 10px;color:#fff">Links</h4>
+      <div><a href="about.html">About</a></div>
+      <div><a href="who-we-serve.html">Who We Serve</a></div>
+      <div><a href="focus-areas.html">Focus Areas</a></div>
+    </div>
+
+    <div>
+      <h4 style="margin:0 0 10px;color:#fff">Contact</h4>
+      <div><a href="contact.html">Contact page</a></div>
+    </div>
+  </div>
+
+  <div class="container copy">© <span id="y"></span> Avenza Life Sciences. All rights reserved.</div>
+</footer>
+
+<script src="app.js"></script>
+<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
 </body>
 </html>
