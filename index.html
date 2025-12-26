@@ -1,72 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Avenza Life Sciences</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f6f8;
-        }
-        header {
-            background: #004d40;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background: #00796b;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
-            background: white;
-        }
-        footer {
-            background: #004d40;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Avenza Life Sciences</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0f3d3e;
+      --secondary: #3a7d7c;
+      --accent: #e8f5f4;
+      --dark: #1a1a1a;
+      --light: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    /* ---------- NAV ---------- */
+    header {
+      background: var(--light);
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      font-size: 22px;
+      color: var(--primary);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      background: linear-gradient(to right, #0f3d3e, #1f6f6d);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 44px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .section-text {
+      max-width: 800px;
+      margin-bottom: 40px;
+    }
+
+    /* ---------- GRID ---------- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--accent);
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--secondary);
+    }
+
+    /* ---------- IMPACT ---------- */
+    .impact {
+      background: #f8fafa;
+      text-align: center;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+      margin-top: 40px;
+    }
+
+    .stat h3 {
+      font-size: 36px;
+      color: var(--primary);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--primary);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer p {
+      opacity: 0.8;
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Avenza Life Sciences</h1>
-    <p>Clinical Research & Site Management Organization</p>
-</header>
+  <!-- NAV -->
+  <header>
+    <nav>
+      <h1>Avenza Life Sciences</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#focus">Focus Areas</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="about.html">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-</nav>
-
-<section>
-    <h2>Welcome</h2>
+  <!-- HERO -->
+  <div class="hero">
+    <h2>Unifying Research and Patient Care</h2>
     <p>
-        Avenza Life Sciences partners with physicians and point-of-care sites
-        to conduct high-quality clinical trials with a focus on patient safety,
-        regulatory compliance, and operational excellence.
+      Avenza Life Sciences bridges clinical research and real-world care
+      through technology-enabled, patient-centric solutions.
     </p>
-</section>
+  </div>
 
-<footer>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">Who We Are</h2>
+    <p class="section-text">
+      Avenza Life Sciences is a healthcare innovation company focused on
+      accelerating clinical research, improving patient outcomes, and
+      enabling data-driven decision making at the point of care.
+    </p>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section id="solutions">
+    <h2 class="section-title">What We Do</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Clinical Research Enablement</h3>
+        <p>Embedding research into routine clinical workflows.</p>
+      </div>
+      <div class="card">
+        <h3>Real-World Evidence</h3>
+        <p>Transforming clinical data into actionable insights.</p>
+      </div>
+      <div class="card">
+        <h3>Technology Platforms</h3>
+        <p>Secure, scalable solutions for healthcare systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS AREAS -->
+  <section id="focus">
+    <h2 class="section-title">Our Focus Areas</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Life Sciences</h3>
+        <p>Supporting sponsors, CROs, and research networks.</p>
+      </div>
+      <div class="card">
+        <h3>Healthcare Providers</h3>
+        <p>Integrating research into everyday patient care.</p>
+      </div>
+      <div class="card">
+        <h3>Data & Analytics</h3>
+        <p>Advanced insights from real-world clinical data.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="impact" class="impact">
+    <h2 class="section-title">Our Impact</h2>
+    <div class="stats">
+      <div class="stat">
+        <h3>100+</h3>
+        <p>Clinical Studies Supported</p>
+      </div>
+      <div class="stat">
+        <h3>50K+</h3>
+        <p>Patients Impacted</p>
+      </div>
+      <div class="stat">
+        <h3>30+</h3>
+        <p>Healthcare Partners</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-text">
+      Interested in partnering with Avenza Life Sciences?
+      Reach out to learn how we can work together.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
     <p>© 2025 Avenza Life Sciences. All rights reserved.</p>
-</footer>
+  </footer>
 
 </body>
 </html>
