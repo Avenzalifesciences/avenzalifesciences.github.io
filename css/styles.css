@@ -51,3 +51,14 @@ a:hover{text-decoration:underline}
   .hero h1{font-size:34px}
   .grid{grid-template-columns:1fr}
 }
+/* DEBUG: force logo visibility */
+.brand img {
+  display: inline-block !important;
+  height: 48px !important;
+  width: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+
+
