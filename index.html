@@ -2,63 +2,552 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Avenza Life Sciences</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Site Name | Clinical Research</title>
+  <meta name="description" content="A clean custom homepage with sections: Home, About, Who We Serve, Join as PI, Focus Areas, Contact." />
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,0.06);
+      --card2: rgba(255,255,255,0.08);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --line: rgba(255,255,255,0.12);
+      --accent: #65d6ff;
+      --accent2:#7c5cff;
+      --shadow: 0 12px 40px rgba(0,0,0,0.35);
+      --radius: 18px;
+      --max: 1100px;
+    }
+
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 500px at 20% -10%, rgba(101,214,255,0.22), transparent 55%),
+        radial-gradient(900px 600px at 90% 10%, rgba(124,92,255,0.22), transparent 55%),
+        radial-gradient(900px 600px at 50% 120%, rgba(101,214,255,0.14), transparent 55%),
+        var(--bg);
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .container{ width: min(var(--max), 92vw); margin: 0 auto; }
+
+    /* Header / Nav */
+    header{
+      position: sticky;
+      top:0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,0.6);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 14px 0;
+      gap: 14px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+    .logo{
+      width: 40px; height: 40px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 10px 25px rgba(101,214,255,0.20);
+      display:grid; place-items:center;
+      font-weight: 800;
+    }
+    nav ul{
+      list-style:none;
+      margin:0; padding:0;
+      display:flex;
+      align-items:center;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+    }
+    nav a{
+      font-size: 14px;
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 10px;
+      transition: 160ms ease;
+    }
+    nav a:hover{
+      color: var(--text);
+      background: rgba(255,255,255,0.06);
+    }
+    .cta{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      transition: 160ms ease;
+      cursor:pointer;
+      white-space: nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,0.08); }
+    .btn.primary{
+      border: 0;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 12px 30px rgba(124,92,255,0.25);
+    }
+
+    /* Sections */
+    section{ padding: 64px 0; }
+    .section-title{
+      font-size: 26px;
+      margin: 0 0 10px;
+      letter-spacing: -0.2px;
+    }
+    .section-lead{
+      margin: 0 0 26px;
+      color: var(--muted);
+      line-height: 1.55;
+      max-width: 70ch;
+    }
+
+    /* Hero */
+    .hero{
+      padding: 62px 0 28px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+    .hero-card{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position: relative;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      background: rgba(255,255,255,0.04);
+    }
+    h1{
+      margin: 14px 0 10px;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.08;
+      letter-spacing: -0.6px;
+    }
+    .hero p{
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 70ch;
+      font-size: 15.5px;
+    }
+    .hero-actions{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .stats{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .stat{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      border-radius: 14px;
+      padding: 12px;
+    }
+    .stat strong{ display:block; font-size: 16px; }
+    .stat span{ display:block; color: var(--muted); font-size: 12px; margin-top: 3px; }
+
+    .side-card{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .side-card h3{ margin: 0 0 10px; font-size: 16px; }
+    .pill-list{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .pill{
+      font-size: 12.5px;
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+    }
+
+    /* Cards / grids */
+    .grid-3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .card{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      border-radius: var(--radius);
+      padding: 18px;
+      transition: 160ms ease;
+    }
+    .card:hover{ transform: translateY(-2px); background: rgba(255,255,255,0.06); }
+    .card h4{ margin: 0 0 8px; font-size: 16px; }
+    .card p{ margin: 0; color: var(--muted); line-height: 1.6; font-size: 14px; }
+
+    /* Contact */
+    .contact-wrap{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    form{
+      display:grid;
+      gap: 10px;
+    }
+    input, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      outline: none;
+      font-size: 14px;
+    }
+    textarea{ min-height: 120px; resize: vertical; }
+    input:focus, textarea:focus{
+      border-color: rgba(101,214,255,0.55);
+      box-shadow: 0 0 0 4px rgba(101,214,255,0.12);
+    }
+    .fineprint{ color: var(--muted); font-size: 12px; line-height: 1.5; margin: 10px 0 0; }
+
+    /* Footer */
+    footer{
+      padding: 26px 0 40px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footer-row{
+      display:flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .grid-3{ grid-template-columns: 1fr; }
+      .stats{ grid-template-columns: 1fr; }
+      .contact-wrap{ grid-template-columns: 1fr; }
+      nav ul{ gap: 8px; }
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Go to Home">
+        <div class="logo">A</div>
+        <div>
+          <div style="font-size:14px; line-height:1.1;">Your Site Name</div>
+          <div style="font-size:12px; color:var(--muted); margin-top:2px;">Clinical Research • Site Network</div>
+        </div>
+      </a>
 
-<header class="topbar">
-  <div class="container nav">
-    <div class="brand">
-      <img src="assets/logo.png" alt="Avenza logo" onerror="this.style.display='none'">
-      <span>AVENZA LIFE SCIENCES</span>
-    </div>
-    <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="who-we-serve.html">Who We Serve</a>
-      <a href="focus-areas.html">Focus Areas</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#serve">Who we serve</a></li>
+          <li><a href="#join">Join as PI</a></li>
+          <li><a href="#focus">Focus Areas</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-<section class="hero">
-  <div class="container heroInner">
-    <div>
-      <h1>Unifying Research and Care</h1>
-      <p>Clinical trial operations that support patients, physicians, sponsors, and CROs—high quality and site-ready execution.</p>
-      <div class="btnRow">
-        <a class="btn btnPrimary" href="contact.html">Contact Us</a>
-        <a class="btn" href="who-we-serve.html">Who We Serve</a>
+      <div class="cta">
+        <a class="btn" href="#join">Partner with us</a>
+        <a class="btn primary" href="#contact">Get in touch</a>
       </div>
     </div>
-    <div class="card">
-      <h3>Quick Links</h3>
-      <p class="small"><a href="sponsors.html">Sponsors</a> • <a href="physicians.html">Physicians</a> • <a href="cro.html">CRO</a> • <a href="patients.html">Patients</a></p>
-      <p class="small"><a href="focus-areas.html">Focus Areas</a> (GI, Derm, Urology, Oncology, Hematology)</p>
+  </header>
+
+  <!-- Home / Hero -->
+  <main id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-card">
+        <span class="badge">✦ Replace this tagline with your real one</span>
+        <h1>From patients to publications—faster, cleaner, compliant.</h1>
+        <p>
+          Use this space for your core value proposition (2–3 lines). Example:
+          We help sponsors, CROs, and investigators run high-quality clinical studies with streamlined
+          operations, reliable recruitment, and rigorous regulatory standards.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#serve">See who we serve</a>
+          <a class="btn" href="#focus">Explore focus areas</a>
+        </div>
+
+        <div class="stats" aria-label="Key highlights">
+          <div class="stat">
+            <strong>Fast Start-Up</strong>
+            <span>Feasibility → activation support</span>
+          </div>
+          <div class="stat">
+            <strong>Quality First</strong>
+            <span>GCP-aligned workflows</span>
+          </div>
+          <div class="stat">
+            <strong>Site Network</strong>
+            <span>Community + specialty clinics</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="side-card">
+        <h3>What we deliver</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.6; font-size:14px;">
+          Add a concise list of your services, differentiators, or specialties.
+        </p>
+
+        <div class="pill-list" aria-label="Services list">
+          <span class="pill">Feasibility & recruitment</span>
+          <span class="pill">Regulatory & IRB support</span>
+          <span class="pill">Sample logistics</span>
+          <span class="pill">Data quality & monitoring readiness</span>
+          <span class="pill">Investigator partnerships</span>
+        </div>
+
+        <div style="margin-top:16px;">
+          <a class="btn" href="#about" style="width:100%;">Learn more about us</a>
+        </div>
+      </aside>
     </div>
-  </div>
-</section>
+  </main>
 
-<section class="section">
-  <div class="container">
-    <h2>Focus Areas</h2>
-    <div class="grid">
-      <div class="card"><h3>Gastroenterology</h3><p><a href="gastroenterology.html">Learn more →</a></p></div>
-      <div class="card"><h3>Dermatology</h3><p><a href="dermatology.html">Learn more →</a></p></div>
-      <div class="card"><h3>Urology</h3><p><a href="urology.html">Learn more →</a></p></div>
-      <div class="card"><h3>Oncology</h3><p><a href="oncology.html">Learn more →</a></p></div>
-      <div class="card"><h3>Hematology</h3><p><a href="hematology.html">Learn more →</a></p></div>
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <p class="section-lead">
+        Replace this section with your story: mission, how you operate, and why you’re different.
+        Keep it short (4–6 sentences) and specific.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4>Our mission</h4>
+          <p>One clear sentence about improving research access and accelerating evidence generation.</p>
+        </div>
+        <div class="card">
+          <h4>How we work</h4>
+          <p>Describe your operational model: standardized SOPs, site training, quality checks, transparency.</p>
+        </div>
+        <div class="card">
+          <h4>What you can expect</h4>
+          <p>Timely communication, clean documentation, dependable execution, and study-ready infrastructure.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="footer">
-  <div class="container">© 2026 Avenza Life Sciences. All rights reserved.</div>
-</footer>
+  <!-- Who We Serve -->
+  <section id="serve">
+    <div class="container">
+      <h2 class="section-title">Who we serve</h2>
+      <p class="section-lead">
+        Explain who benefits from working with you and what outcomes they get. Keep each card outcome-focused.
+      </p>
 
-<script src="js/app.js"></script>
+      <div class="grid-3">
+        <div class="card">
+          <h4>Sponsors</h4>
+          <p>Reliable sites, consistent quality, efficient enrollment, and predictable start-up timelines.</p>
+        </div>
+        <div class="card">
+          <h4>CROs</h4>
+          <p>Operational alignment, fast issue resolution, monitoring readiness, and clean study documentation.</p>
+        </div>
+        <div class="card">
+          <h4>Clinics & Health Systems</h4>
+          <p>Research enablement, PI support, patient access, and scalable study operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join as PI -->
+  <section id="join">
+    <div class="container">
+      <h2 class="section-title">Join as PI</h2>
+      <p class="section-lead">
+        Invite Principal Investigators to partner with you. Outline benefits + what you handle vs what they handle.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4>PI support</h4>
+          <p>Study start-up, delegation logs, training coordination, and day-to-day operational backbone.</p>
+        </div>
+        <div class="card">
+          <h4>Regulatory & compliance</h4>
+          <p>IRB submissions, essential documents, SOP alignment, audit readiness, and record retention.</p>
+        </div>
+        <div class="card">
+          <h4>Infrastructure</h4>
+          <p>Specimen handling workflows, shipping, storage, visit scheduling, and data quality checks.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn primary" href="#contact">Apply / express interest</a>
+        <a class="btn" href="#focus">See focus areas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Focus Areas -->
+  <section id="focus">
+    <div class="container">
+      <h2 class="section-title">Focus Areas</h2>
+      <p class="section-lead">
+        List your therapeutic or operational focus. If you have many, keep the top 6–9 here and link to a dedicated page later.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4>Gastroenterology</h4>
+          <p>IBD, IBS, functional GI disorders, reflux, dyspepsia—tailor to your real scope.</p>
+        </div>
+        <div class="card">
+          <h4>Hepatology</h4>
+          <p>NASH/MASH, cirrhosis, liver function and related outcomes—edit as needed.</p>
+        </div>
+        <div class="card">
+          <h4>Women’s health</h4>
+          <p>PCOS, metabolic health, gut-brain axis studies—edit to match your offerings.</p>
+        </div>
+        <div class="card">
+          <h4>Sample-based research</h4>
+          <p>Biobanking, biospecimen processing, shipping workflows, and cold-chain logistics.</p>
+        </div>
+        <div class="card">
+          <h4>Real-world evidence</h4>
+          <p>Retrospective chart review studies, registries, and prospective observational research.</p>
+        </div>
+        <div class="card">
+          <h4>Site operations</h4>
+          <p>Training, SOPs, quality management, recruitment enablement, and monitoring readiness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-lead">
+        Add your real email/phone/address. The form below is static; you can connect it to Formspree, Netlify Forms, or your backend later.
+      </p>
+
+      <div class="contact-wrap">
+        <div class="card">
+          <h4>Contact details</h4>
+          <p style="margin:0; color:var(--muted); line-height:1.7;">
+            <strong style="color:var(--text);">Email:</strong> yourname@yourdomain.com<br/>
+            <strong style="color:var(--text);">Phone:</strong> (000) 000-0000<br/>
+            <strong style="color:var(--text);">Location:</strong> City, State, USA<br/>
+          </p>
+          <p class="fineprint">
+            Tip: If you want a working form without backend code, use Formspree/Netlify Forms and replace the form action.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Send a message</h4>
+          <form action="#" method="post" onsubmit="return fakeSubmit(event)">
+            <input name="name" placeholder="Your name" autocomplete="name" required />
+            <input name="email" type="email" placeholder="Your email" autocomplete="email" required />
+            <input name="topic" placeholder="Topic (Sponsor / CRO / PI / General)" />
+            <textarea name="message" placeholder="How can we help?" required></textarea>
+            <button class="btn primary" type="submit">Submit</button>
+            <p class="fineprint" id="formNote" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© <span id="year"></span> Your Site Name. All rights reserved.</div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="#home">Back to top</a>
+        <span style="opacity:.5;">•</span>
+        <a href="#contact">Contact</a>
+        <span style="opacity:.5;">•</span>
+        <a href="#about">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Static demo submit (replace with real backend or Formspree/Netlify)
+    function fakeSubmit(e){
+      e.preventDefault();
+      const note = document.getElementById("formNote");
+      note.textContent = "Thanks! This is a static demo form. Connect it to Formspree/Netlify Forms to receive messages.";
+      e.target.reset();
+      return false;
+    }
+  </script>
 </body>
 </html>
