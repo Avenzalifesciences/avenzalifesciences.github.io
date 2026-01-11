@@ -3,16 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Site Name | Clinical Research</title>
-  <meta name="description" content="A clean custom homepage with sections: Home, About, Who We Serve, Join as PI, Focus Areas, Contact." />
+  <title>Avenza Life Sciences | Clinical Research</title>
+
   <style>
     :root{
       --bg: #0b1220;
       --card: rgba(255,255,255,0.06);
-      --card2: rgba(255,255,255,0.08);
       --text: rgba(255,255,255,0.92);
       --muted: rgba(255,255,255,0.70);
-      --line: rgba(255,255,255,0.12);
+      --line: rgba(255,255,255,0.14);
       --accent: #65d6ff;
       --accent2:#7c5cff;
       --shadow: 0 12px 40px rgba(0,0,0,0.35);
@@ -24,25 +23,20 @@
     html{ scroll-behavior:smooth; }
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(1200px 500px at 20% -10%, rgba(101,214,255,0.22), transparent 55%),
-        radial-gradient(900px 600px at 90% 10%, rgba(124,92,255,0.22), transparent 55%),
-        radial-gradient(900px 600px at 50% 120%, rgba(101,214,255,0.14), transparent 55%),
-        var(--bg);
+      background: var(--bg);
     }
-
     a{ color:inherit; text-decoration:none; }
     .container{ width: min(var(--max), 92vw); margin: 0 auto; }
 
-    /* Header / Nav */
+    /* Header */
     header{
       position: sticky;
       top:0;
       z-index: 50;
       backdrop-filter: blur(10px);
-      background: rgba(11,18,32,0.6);
+      background: rgba(11,18,32,0.55);
       border-bottom: 1px solid var(--line);
     }
     .nav{
@@ -56,15 +50,15 @@
       display:flex;
       align-items:center;
       gap: 12px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.2px;
     }
     .logo{
-      width: 40px; height: 40px; border-radius: 12px;
+      width: 42px; height: 42px; border-radius: 12px;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 10px 25px rgba(101,214,255,0.20);
       display:grid; place-items:center;
-      font-weight: 800;
+      font-weight: 900;
+      box-shadow: 0 10px 25px rgba(101,214,255,0.20);
     }
     nav ul{
       list-style:none;
@@ -102,7 +96,7 @@
       background: rgba(255,255,255,0.06);
       color: var(--text);
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       transition: 160ms ease;
       cursor:pointer;
       white-space: nowrap;
@@ -128,24 +122,43 @@
       max-width: 70ch;
     }
 
-    /* Hero */
+    /* HERO with background image like your reference */
     .hero{
+      position: relative;
+      min-height: 78vh;
+      display:flex;
+      align-items:center;
       padding: 62px 0 28px;
+      background-image: url("assets/home-screen.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow:hidden;
     }
-    .hero-grid{
+    /* Dark overlay for readability */
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg, rgba(11,18,32,0.80) 0%, rgba(11,18,32,0.50) 55%, rgba(11,18,32,0.25) 100%),
+        rgba(11,18,32,0.35);
+      z-index:0;
+    }
+    .hero-inner{
+      position: relative;
+      z-index:1;
       display:grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 26px;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 22px;
       align-items: stretch;
     }
     .hero-card{
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.04);
+      background: rgba(0,0,0,0.35);
       border-radius: var(--radius);
       padding: 28px;
       box-shadow: var(--shadow);
-      overflow:hidden;
-      position: relative;
     }
     .badge{
       display:inline-flex;
@@ -156,17 +169,17 @@
       border: 1px solid var(--line);
       color: var(--muted);
       font-size: 12px;
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.05);
     }
     h1{
       margin: 14px 0 10px;
-      font-size: clamp(30px, 4vw, 44px);
+      font-size: clamp(32px, 4vw, 48px);
       line-height: 1.08;
       letter-spacing: -0.6px;
     }
     .hero p{
       margin: 0 0 18px;
-      color: var(--muted);
+      color: rgba(255,255,255,0.82);
       line-height: 1.6;
       max-width: 70ch;
       font-size: 15.5px;
@@ -177,24 +190,25 @@
       flex-wrap: wrap;
       margin-top: 18px;
     }
+
     .stats{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
-      margin-top: 20px;
+      margin-top: 18px;
     }
     .stat{
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.06);
       border-radius: 14px;
       padding: 12px;
     }
     .stat strong{ display:block; font-size: 16px; }
-    .stat span{ display:block; color: var(--muted); font-size: 12px; margin-top: 3px; }
+    .stat span{ display:block; color: rgba(255,255,255,0.75); font-size: 12px; margin-top: 3px; }
 
     .side-card{
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.04);
+      background: rgba(0,0,0,0.35);
       border-radius: var(--radius);
       padding: 22px;
       box-shadow: var(--shadow);
@@ -208,11 +222,11 @@
     }
     .pill{
       font-size: 12.5px;
-      color: var(--muted);
+      color: rgba(255,255,255,0.78);
       padding: 8px 10px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.06);
     }
 
     /* Cards / grids */
@@ -239,10 +253,7 @@
       gap: 16px;
       align-items: start;
     }
-    form{
-      display:grid;
-      gap: 10px;
-    }
+    form{ display:grid; gap: 10px; }
     input, textarea{
       width:100%;
       padding: 12px 12px;
@@ -260,12 +271,12 @@
     }
     .fineprint{ color: var(--muted); font-size: 12px; line-height: 1.5; margin: 10px 0 0; }
 
-    /* Footer */
     footer{
       padding: 26px 0 40px;
       border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 13px;
+      background: rgba(11,18,32,0.8);
     }
     .footer-row{
       display:flex;
@@ -274,25 +285,24 @@
       flex-wrap: wrap;
     }
 
-    /* Responsive */
     @media (max-width: 980px){
-      .hero-grid{ grid-template-columns: 1fr; }
+      .hero-inner{ grid-template-columns: 1fr; }
       .grid-3{ grid-template-columns: 1fr; }
       .stats{ grid-template-columns: 1fr; }
       .contact-wrap{ grid-template-columns: 1fr; }
       nav ul{ gap: 8px; }
+      .hero{ min-height: auto; }
     }
   </style>
 </head>
 
 <body>
-  <!-- Header -->
   <header>
     <div class="container nav">
       <a class="brand" href="#home" aria-label="Go to Home">
         <div class="logo">A</div>
         <div>
-          <div style="font-size:14px; line-height:1.1;">Your Site Name</div>
+          <div style="font-size:14px; line-height:1.1;">Avenza Life Sciences</div>
           <div style="font-size:12px; color:var(--muted); margin-top:2px;">Clinical Research • Site Network</div>
         </div>
       </a>
@@ -310,26 +320,25 @@
 
       <div class="cta">
         <a class="btn" href="#join">Partner with us</a>
-        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn primary" href="#contact">Contact</a>
       </div>
     </div>
   </header>
 
-  <!-- Home / Hero -->
+  <!-- HERO -->
   <main id="home" class="hero">
-    <div class="container hero-grid">
+    <div class="container hero-inner">
       <div class="hero-card">
-        <span class="badge">✦ Replace this tagline with your real one</span>
-        <h1>From patients to publications—faster, cleaner, compliant.</h1>
+        <span class="badge">Clinical trial operations • Recruitment • Quality</span>
+        <h1>Unifying Research and Care</h1>
         <p>
-          Use this space for your core value proposition (2–3 lines). Example:
-          We help sponsors, CROs, and investigators run high-quality clinical studies with streamlined
-          operations, reliable recruitment, and rigorous regulatory standards.
+          We support sponsors, CROs, and investigators with streamlined study start-up,
+          reliable site operations, and monitoring-ready documentation—so trials run clean and on time.
         </p>
 
         <div class="hero-actions">
-          <a class="btn primary" href="#serve">See who we serve</a>
-          <a class="btn" href="#focus">Explore focus areas</a>
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn" href="#serve">Who we serve</a>
         </div>
 
         <div class="stats" aria-label="Key highlights">
@@ -342,28 +351,28 @@
             <span>GCP-aligned workflows</span>
           </div>
           <div class="stat">
-            <strong>Site Network</strong>
-            <span>Community + specialty clinics</span>
+            <strong>Site Ready</strong>
+            <span>Training + SOP-based execution</span>
           </div>
         </div>
       </div>
 
       <aside class="side-card">
-        <h3>What we deliver</h3>
-        <p style="margin:0; color:var(--muted); line-height:1.6; font-size:14px;">
-          Add a concise list of your services, differentiators, or specialties.
+        <h3>Quick links</h3>
+        <p style="margin:0; color:rgba(255,255,255,0.82); line-height:1.6; font-size:14px;">
+          Replace these with your real pages later (Sponsors / CRO / Physicians / Patients).
         </p>
 
         <div class="pill-list" aria-label="Services list">
-          <span class="pill">Feasibility & recruitment</span>
-          <span class="pill">Regulatory & IRB support</span>
-          <span class="pill">Sample logistics</span>
-          <span class="pill">Data quality & monitoring readiness</span>
-          <span class="pill">Investigator partnerships</span>
+          <span class="pill">Sponsors</span>
+          <span class="pill">CROs</span>
+          <span class="pill">Physicians</span>
+          <span class="pill">Patients</span>
+          <span class="pill">Join as PI</span>
         </div>
 
         <div style="margin-top:16px;">
-          <a class="btn" href="#about" style="width:100%;">Learn more about us</a>
+          <a class="btn" href="#focus" style="width:100%;">Explore focus areas</a>
         </div>
       </aside>
     </div>
@@ -374,22 +383,22 @@
     <div class="container">
       <h2 class="section-title">About</h2>
       <p class="section-lead">
-        Replace this section with your story: mission, how you operate, and why you’re different.
-        Keep it short (4–6 sentences) and specific.
+        Avenza Life Sciences is a research operations partner focused on quality execution, compliant workflows,
+        and patient-centered trial delivery across specialty clinics and community networks.
       </p>
 
       <div class="grid-3">
         <div class="card">
           <h4>Our mission</h4>
-          <p>One clear sentence about improving research access and accelerating evidence generation.</p>
+          <p>Expand access to clinical research and accelerate evidence generation with site-ready operations.</p>
         </div>
         <div class="card">
           <h4>How we work</h4>
-          <p>Describe your operational model: standardized SOPs, site training, quality checks, transparency.</p>
+          <p>Standard SOPs, training, timely communication, and monitoring/audit-ready documentation.</p>
         </div>
         <div class="card">
-          <h4>What you can expect</h4>
-          <p>Timely communication, clean documentation, dependable execution, and study-ready infrastructure.</p>
+          <h4>What to expect</h4>
+          <p>Responsive coordination, clean data, reliable recruitment support, and strong regulatory execution.</p>
         </div>
       </div>
     </div>
@@ -400,21 +409,21 @@
     <div class="container">
       <h2 class="section-title">Who we serve</h2>
       <p class="section-lead">
-        Explain who benefits from working with you and what outcomes they get. Keep each card outcome-focused.
+        We partner with teams that need predictable site performance and high-quality study execution.
       </p>
 
       <div class="grid-3">
         <div class="card">
           <h4>Sponsors</h4>
-          <p>Reliable sites, consistent quality, efficient enrollment, and predictable start-up timelines.</p>
+          <p>Dependable sites, consistent enrollment performance, and quality-first trial execution.</p>
         </div>
         <div class="card">
           <h4>CROs</h4>
-          <p>Operational alignment, fast issue resolution, monitoring readiness, and clean study documentation.</p>
+          <p>Operational alignment, fast issue resolution, and monitoring readiness with clean documentation.</p>
         </div>
         <div class="card">
           <h4>Clinics & Health Systems</h4>
-          <p>Research enablement, PI support, patient access, and scalable study operations.</p>
+          <p>PI support, scalable research operations, and improved access for eligible patients.</p>
         </div>
       </div>
     </div>
@@ -425,21 +434,21 @@
     <div class="container">
       <h2 class="section-title">Join as PI</h2>
       <p class="section-lead">
-        Invite Principal Investigators to partner with you. Outline benefits + what you handle vs what they handle.
+        Interested in becoming a Principal Investigator? We provide the operational backbone so you can focus on patient care and oversight.
       </p>
 
       <div class="grid-3">
         <div class="card">
           <h4>PI support</h4>
-          <p>Study start-up, delegation logs, training coordination, and day-to-day operational backbone.</p>
+          <p>Start-up coordination, delegation logs, training support, and day-to-day study operations.</p>
         </div>
         <div class="card">
           <h4>Regulatory & compliance</h4>
-          <p>IRB submissions, essential documents, SOP alignment, audit readiness, and record retention.</p>
+          <p>IRB submissions, essential docs, SOP alignment, audit readiness, and record retention.</p>
         </div>
         <div class="card">
           <h4>Infrastructure</h4>
-          <p>Specimen handling workflows, shipping, storage, visit scheduling, and data quality checks.</p>
+          <p>Scheduling workflows, specimen handling & shipping, and data quality checks.</p>
         </div>
       </div>
 
@@ -455,34 +464,16 @@
     <div class="container">
       <h2 class="section-title">Focus Areas</h2>
       <p class="section-lead">
-        List your therapeutic or operational focus. If you have many, keep the top 6–9 here and link to a dedicated page later.
+        We support studies across key therapeutic and operational areas.
       </p>
 
       <div class="grid-3">
-        <div class="card">
-          <h4>Gastroenterology</h4>
-          <p>IBD, IBS, functional GI disorders, reflux, dyspepsia—tailor to your real scope.</p>
-        </div>
-        <div class="card">
-          <h4>Hepatology</h4>
-          <p>NASH/MASH, cirrhosis, liver function and related outcomes—edit as needed.</p>
-        </div>
-        <div class="card">
-          <h4>Women’s health</h4>
-          <p>PCOS, metabolic health, gut-brain axis studies—edit to match your offerings.</p>
-        </div>
-        <div class="card">
-          <h4>Sample-based research</h4>
-          <p>Biobanking, biospecimen processing, shipping workflows, and cold-chain logistics.</p>
-        </div>
-        <div class="card">
-          <h4>Real-world evidence</h4>
-          <p>Retrospective chart review studies, registries, and prospective observational research.</p>
-        </div>
-        <div class="card">
-          <h4>Site operations</h4>
-          <p>Training, SOPs, quality management, recruitment enablement, and monitoring readiness.</p>
-        </div>
+        <div class="card"><h4>Gastroenterology</h4><p>IBD, IBS, functional GI disorders, reflux, dyspepsia.</p></div>
+        <div class="card"><h4>Dermatology</h4><p>Inflammatory skin disease, acne, eczema, psoriasis trials.</p></div>
+        <div class="card"><h4>Urology</h4><p>OAB, LUTS, renal outcomes and related research programs.</p></div>
+        <div class="card"><h4>Oncology</h4><p>Supportive care, observational programs, site operations enablement.</p></div>
+        <div class="card"><h4>Hematology</h4><p>Real-world evidence, specimen-based programs, registry studies.</p></div>
+        <div class="card"><h4>Sample logistics</h4><p>Biobanking, processing, cold-chain shipping workflows.</p></div>
       </div>
     </div>
   </section>
@@ -492,7 +483,7 @@
     <div class="container">
       <h2 class="section-title">Contact</h2>
       <p class="section-lead">
-        Add your real email/phone/address. The form below is static; you can connect it to Formspree, Netlify Forms, or your backend later.
+        Add your real email/phone/address. This form is static (demo).
       </p>
 
       <div class="contact-wrap">
@@ -503,9 +494,7 @@
             <strong style="color:var(--text);">Phone:</strong> (000) 000-0000<br/>
             <strong style="color:var(--text);">Location:</strong> City, State, USA<br/>
           </p>
-          <p class="fineprint">
-            Tip: If you want a working form without backend code, use Formspree/Netlify Forms and replace the form action.
-          </p>
+          <p class="fineprint">Tip: Connect the form to Formspree/Netlify Forms later for real submissions.</p>
         </div>
 
         <div class="card">
@@ -525,7 +514,7 @@
 
   <footer>
     <div class="container footer-row">
-      <div>© <span id="year"></span> Your Site Name. All rights reserved.</div>
+      <div>© <span id="year"></span> Avenza Life Sciences. All rights reserved.</div>
       <div style="display:flex; gap:14px; flex-wrap:wrap;">
         <a href="#home">Back to top</a>
         <span style="opacity:.5;">•</span>
@@ -537,14 +526,11 @@
   </footer>
 
   <script>
-    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Static demo submit (replace with real backend or Formspree/Netlify)
     function fakeSubmit(e){
       e.preventDefault();
-      const note = document.getElementById("formNote");
-      note.textContent = "Thanks! This is a static demo form. Connect it to Formspree/Netlify Forms to receive messages.";
+      document.getElementById("formNote").textContent =
+        "Thanks! This is a static demo form. Connect it to Formspree/Netlify Forms to receive messages.";
       e.target.reset();
       return false;
     }
