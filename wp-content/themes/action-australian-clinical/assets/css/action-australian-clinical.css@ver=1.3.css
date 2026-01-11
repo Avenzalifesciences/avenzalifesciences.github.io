@@ -1,0 +1,1043 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #ffffff;
+	font-family: "Manrope", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	overflow-x: hidden;
+}
+
+h1,
+h2 {
+	font-family: "Manrope", sans-serif;
+}
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #09225f;
+	text-decoration: underline;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+:root {
+	--container-width: 1250px;
+	--container-padding: calc((100vw - var(--container-width)) / 2);
+}
+
+.container {
+	max-width: 1250px;
+	padding: 0;
+	margin: 0px auto;
+}
+
+.et-db #et-boc .et-l .et_pb_row {
+	width: 86% !important;
+	max-width: 1250px !important;
+}
+
+.et-db #et-boc header {
+	position: relative;
+	z-index: 2;
+}
+
+.et-db #et-boc header #header {
+	position: relative !important;
+	border-bottom: 2px solid rgb(255 255 255 / 17%);
+	background-color: #ffffff;
+	box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.1);
+	transition: all .3s ease-in-out;
+}
+
+.et-db #et-boc header #header * {
+	transition: all .3s ease-in-out;
+}
+
+.et-db #et-boc header #header .et_pb_row_0_tb_header {
+	display: flex;
+	align-items: center;
+}
+
+.et-db #et-boc header #header .logoBox a img {
+	vertical-align: top;
+}
+
+.et-db #et-boc header #header .menuBox nav {
+	padding: 0;
+}
+
+.et-db #et-boc header #header .menuBox nav>ul.nav {
+	align-items: center;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.et-db #et-boc header #header .menuBox nav>ul.nav>li {
+	align-items: center;
+	margin-top: 0;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.et-db #et-boc header #header .menuBox nav>ul.nav>li>a {
+	display: flex;
+	align-items: center;
+	min-height: 80px;
+	padding-bottom: 0;
+	font-family: "Manrope", sans-serif;
+	font-size: 18px;
+	color: #000000 !important;
+	font-weight: 500;
+}
+
+.et-db #et-boc header #header .menuBox nav>ul.nav>li>a:hover,
+.et-db #et-boc header #header .menuBox nav>ul.nav>li.current_page_item>a,
+.et-db #et-boc header #header .menuBox nav>ul.nav>li.current-menu-parent>a {
+	color: #022179 !important;
+}
+
+.et-db #et-boc header #header .menuBox nav>ul.nav>li>a:after {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	width: 100%;
+	border-bottom: 4px solid transparent;
+	border-radius: 2px 2px 0 0;
+	transition: all .3s ease-in-out;
+}
+
+.et-db #et-boc header #header .menuBox nav>ul.nav>li>a:hover:after,
+.et-db #et-boc header #header .menuBox nav>ul.nav>li.current_page_item>a:after,
+.et-db #et-boc header #header .menuBox nav>ul.nav>li.current-menu-parent>a:after {
+	border-bottom-color: #022179;
+}
+
+.et-db #et-boc header #header .menuBox nav>ul.nav>li.contactLink {
+	padding-right: 0;
+}
+
+.et-db #et-boc header #header .menuBox nav>ul.nav>li.contactLink>a {
+	min-height: 50px;
+	padding: 10px 20px !important;
+	background-color: #022179;
+	color: #ffffff !important;
+	border-radius: 5px;
+}
+
+.et-db #et-boc header #header .menuBox nav>ul.nav>li.contactLink>a:hover,
+.et-db #et-boc header #header .menuBox nav>ul.nav>li.contactLink.current_page_item>a {
+	background-color: #55298B;
+	color: #ffffff !important;
+}
+
+.et-db #et-boc header #header .menuBox nav>ul.nav>li.contactLink>a:after {
+	display: none;
+}
+
+.et-db #et-boc header #header .menuBox ul#mobile_menu1 li.current-menu-item a {
+	color: #fff !important;
+}
+
+.home.et-db #et-boc header #header {
+	position: absolute !important;
+	background-color: transparent;
+}
+
+.home.et-db #et-boc header #header .logoBox a img {
+	filter: brightness(0) invert(1);
+}
+
+.home.et-db #et-boc header #header .menuBox nav>ul.nav>li>a {
+	color: #ffffff !important;
+}
+
+.home.et-db #et-boc header #header .menuBox nav>ul.nav>li.contactLink>a {
+	background-color: #ffffff;
+	color: #000000 !important;
+}
+
+.home.et-db #et-boc header #header .menuBox nav>ul.nav>li.contactLink>a:hover {
+	background-color: #55298B;
+	color: #ffffff !important;
+}
+
+.et-db #et-boc header.sticky {
+	position: sticky;
+	top: 0;
+}
+
+.home.et-db #et-boc header.sticky #header {
+	background-color: #ffffff;
+}
+
+.home.et-db #et-boc header.sticky #header .logoBox a img {
+	filter: none;
+}
+
+.home.et-db #et-boc header.sticky #header .menuBox nav>ul.nav>li>a {
+	color: #000000 !important;
+}
+
+.home.et-db #et-boc header.sticky #header .menuBox nav>ul.nav>li>a:hover,
+.home.et-db #et-boc header.sticky #header .menuBox nav>ul.nav>li.current_page_item>a,
+.home.et-db #et-boc header.sticky #header .menuBox nav>ul.nav>li.current-menu-parent>a {
+	color: #022179 !important;
+}
+
+.home.et-db #et-boc header.sticky #header .menuBox nav>ul.nav>li.contactLink>a {
+	background-color: #022179;
+	color: #ffffff !important;
+}
+
+.home.et-db #et-boc header.sticky #header .menuBox nav>ul.nav>li.contactLink>a:hover {
+	background-color: #55298B;
+	color: #ffffff !important;
+}
+
+.home.et-db #et-boc header #header .menuBox .mobile_nav .mobile_menu_bar:before {
+	color: #ffffff;
+}
+
+.home.et-db #et-boc header.sticky #header .menuBox .mobile_nav .mobile_menu_bar:before {
+	color: #022179 !important;
+}
+
+#sliderSec {
+	min-height: 600px;
+	display: flex;
+	position: relative;
+	z-index: 0;
+}
+
+#sliderSec .bannerSec {
+	margin-bottom: 20px !important;
+}
+
+#sliderSec .bannerSec p {
+	margin-bottom: 15px !important;
+}
+
+#sliderSec .bannerSec h1 {
+	padding-bottom: 0 !important;
+}
+
+#sliderSec a.et_pb_button {
+	transition: all .3s ease-in-out !important;
+}
+
+.titleIcon h2 {
+	padding-bottom: 20px !important;
+	padding-left: 50px !important;
+}
+
+.titleIcon h2:before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 39px;
+	height: 36px;
+	background: url(../images/titleIcon.svg) left top no-repeat;
+}
+
+.titleIcon strong {
+	color: #55298B !important;
+	font-weight: 700;
+}
+
+#howDoJoinSec .amEligibleRow .et_pb_column {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+
+#howDoJoinSec .amEligibleRow .et_pb_column .itemBox {
+	width: calc(50% - 20px);
+	margin: 0 !important;
+}
+
+.serviceTop {
+	display: flex;
+	align-items: center;
+}
+
+.serviceIcon .et_pb_main_blurb_image {
+	margin-bottom: 20px !important;
+}
+
+.serviceIcon h4.et_pb_module_header {
+	min-height: 65px !important;
+}
+
+.joinImgBox:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: calc(-40px - var(--container-padding));
+	width: calc(110% + var(--container-padding));
+	height: 460px;
+	background: url(../../../../uploads/2024/09/join-as-thumb.jpg) top right no-repeat;
+	background-size: cover;
+	border-radius: 0 30px 30px 0;
+}
+
+.reachTitle .et_pb_text_inner {
+	display: flex;
+	justify-content: center;
+}
+
+.reachTitle .et_pb_text_inner h2 {
+	display: inline-block;
+	position: relative;
+}
+
+.reachTitle h2:before {
+	filter: brightness(0) invert(1);
+}
+
+.reachList ul {
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.reachList ul li {
+	position: relative;
+	width: auto;
+	display: inline-block;
+	font-size: 20px;
+	line-height: 25px;
+	color: #ffffff !important;
+}
+
+.reachList ul li:before {
+	content: "";
+	position: absolute;
+	top: 10px;
+	right: -36px;
+	width: 9px;
+	height: 9px;
+	background-color: #FFFFFF;
+	border-radius: 50px;
+}
+
+.reachList ul li:last-child:before {
+	display: none;
+}
+
+#footerSec .et_pb_text_2_tb_footer {
+	margin-bottom: 6.174%;
+}
+
+#footerSec .footerLogo img {
+	filter: brightness(0) invert(1);
+}
+
+#footerSec .footerLink ul {
+	display: flex;
+	flex-direction: column;
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+}
+
+#footerSec .footerLink ul li {
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+	width: 100%;
+}
+
+#footerSec .footerLink ul li a {
+	position: relative;
+	display: inline-block;
+	width: auto;
+	font-size: 18px !important;
+	color: #CDDAFE !important;
+	line-height: 28px !important;
+}
+
+#footerSec .footerLink ul li a:hover {
+	color: #ffffff !important;
+}
+
+#footerSec .footerMenu .et-menu-nav {
+	padding: 0 !important;
+}
+
+#footerSec .footerMenu .et-menu-nav ul.et-menu {
+	padding: 0px 6px;
+	display: flex;
+	flex-direction: column;
+}
+
+#footerSec .footerMenu .et-menu-nav ul.et-menu li.page_item>a:hover {
+	color: #ffffff !important;
+}
+
+#footerSec .footerMenu.et_pb_menu .et_pb_menu__menu,
+#footerSec .footerMenu.et_pb_fullwidth_menu .et_pb_menu__menu {
+	display: flex !important;
+}
+
+#footerSec .footerMenu .et_mobile_nav_menu {
+	display: none !important;
+}
+
+#footerSec .footerMenu .et_pb_menu__wrap {
+	justify-content: flex-start !important;
+}
+
+
+/* contact form 7 */
+.contact_form .wpcf7-form .form-group div.wpcf7-response-output {
+	margin: 5px 0em 1em !important;
+	padding: 10px !important;
+	text-align: center !important;
+}
+
+.contact_form .wpcf7-form .form-group .wpcf7-form-control-wrap {
+	display: inline-block;
+	width: 100%;
+	margin: 0em 0em 0em;
+	color: #fff;
+	font-size: 16px;
+}
+
+.contact_form .wpcf7-form .form-group span.wpcf7-not-valid-tip {
+	position: absolute;
+	top: 16px;
+	right: 15px;
+	font-size: 12px;
+	white-space: nowrap;
+	color: #ff0000 !important;
+}
+
+.contact_form .wpcf7-form .form-group .form-control.wpcf7-not-valid {
+	border-color: #f00 !important;
+}
+
+
+/*------------- Inner pages -------------*/
+#sliderSec.innerBanner {
+	min-height: 420px;
+}
+
+#sliderSec.innerBanner .bannerSec h1 {
+	margin-bottom: 20px !important;
+}
+
+#sliderSec.innerBanner .bannerSec p {
+	margin-bottom: 15px !important;
+}
+
+#sliderSec #breadcrumbs {
+	display: inline-block;
+	width: auto;
+	font-size: 18px;
+	color: rgb(255 255 255 / 50%) !important;
+	line-height: 18px !important;
+}
+
+#sliderSec #breadcrumbs strong {
+	padding: 0 10px;
+	font-weight: 400;
+	line-height: 18px;
+}
+
+#sliderSec #breadcrumbs .home {
+	position: relative;
+	padding-left: 30px;
+}
+
+#sliderSec #breadcrumbs .home:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 19px;
+	height: 19px;
+	background: url(../images/home-icon.svg) left top no-repeat;
+}
+
+#sliderSec #breadcrumbs a {
+	padding-bottom: 0;
+	font-size: 18px;
+	color: #ffffff !important;
+	line-height: 18px !important;
+	text-decoration: none !important;
+	transition: all 0.3s ease-in-out;
+}
+
+#sliderSec #breadcrumbs a:hover {
+	color: #ffffff !important;
+}
+
+/*------------- About page -------------*/
+#ourVisionBox {
+	width: 51%;
+	padding: 20px !important;
+	background-color: #ffffff !important;
+	border: 1px solid #022179 !important;
+	border-radius: 20px !important;
+	position: absolute;
+	bottom: -70px;
+	right: 50px;
+}
+
+#aboutSec .missionBox {
+	transition: all 0.3s ease-in-out;
+}
+
+#aboutSec .missionBox .et_pb_module .et_pb_text_inner p {
+	min-height: 90px;
+}
+
+#aboutSec .missionBox:hover .et_pb_module .et_pb_text_inner p {
+	color: #FFFFFF !important;
+}
+
+#aboutSec .missionBox:hover .et_pb_module .et_pb_text_inner h3 {
+	color: #FFFFFF !important;
+}
+
+#aboutSec .missionBox:hover .et_pb_image_wrap img {
+	filter: brightness(0) invert(1);
+}
+
+#teamSec {
+	background-color: #ffffff !important;
+	padding-bottom: 0 !important;
+}
+
+/*------------- Service page -------------*/
+.serviceBox .serviceIcon h4.et_pb_module_header {
+	min-height: auto !important;
+	margin-bottom: 10px !important;
+}
+
+/*------------- Join As page -------------*/
+#aboutSec.joinAsSec {
+	margin-bottom: 175px !important;
+}
+
+#joinAsBox {
+	padding-bottom: 175px !important;
+}
+
+#joinAsBox:before {
+	content: "";
+	position: absolute;
+	bottom: -60%;
+	right: calc(-40px - var(--container-padding));
+	width: calc(103% + var(--container-padding));
+	height: 360px;
+	background: url(../images/join-as-img3.png) top right no-repeat;
+	background-size: cover;
+	border-radius: 0 0px 0 90px;
+}
+
+#benefitsBox .helpBox .et_pb_text_inner h3 {
+	padding-bottom: 20px !important;
+	min-height: 80px;
+}
+
+#benefitsBox .helpBox .et_pb_text_inner p {
+	min-height: 90px;
+}
+
+/*------------- Patient page -------------*/
+.patientTopSec {
+	overflow: hidden;
+}
+
+.patientTopSec .patientImgBox:before {
+	content: '';
+	background-color: #55298B;
+	width: 530px;
+	height: 250px;
+	position: absolute;
+	right: calc(-50px - var(--container-padding));
+	top: 20%;
+}
+
+.helpSec .et_pb_column_1_4 {
+	width: 24.75% !important;
+	margin-right: 1% !important;
+}
+
+.helpSec .et_pb_column_1_4:last-child {
+	margin-right: 0% !important;
+}
+
+.helpBox .et_pb_text_inner h2 {
+	margin-bottom: 20px !important;
+	padding: 0 !important;
+	width: 55px;
+	height: 55px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #55298B !important;
+	font-size: 30px !important;
+	font-weight: 600 !important;
+	line-height: 50px !important;
+	color: #ffffff !important;
+	border-radius: 50px !important;
+}
+
+.helpBox .et_pb_text_inner h3 {
+	padding-bottom: 20px !important;
+	min-height: 100px;
+}
+
+.patientBlueBox .et_pb_text_inner p>a {
+	padding-bottom: 3px !important;
+	border-bottom: 1px solid #fff !important;
+	color: #ffffff !important;
+	font-style: italic !important;
+}
+
+.patientBlueBox .et_pb_text_inner p>a:hover {
+	border-bottom: 0px solid #ffffff !important;
+}
+
+/*------------- Contact page -------------*/
+.contactShape:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 200px;
+	clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0% 100%);
+	background-color: #EBF0FF;
+}
+
+.contact_form h3 {
+	padding: 0 0 20px 0 !important;
+	font-size: 25px !important;
+	color: #011241 !important;
+	font-weight: 500 !important;
+	line-height: 26px !important;
+}
+
+.contact_form h3 strong {
+	color: #55298B !important;
+	font-weight: 500 !important;
+}
+
+.contact_form .form-group {
+	position: relative;
+	float: left;
+	width: 100%;
+	margin-bottom: 20px !important;
+}
+
+.contact_form .form-group label {
+	margin-bottom: 10px !important;
+	display: inline-block;
+	width: 100% !important;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 600;
+	color: #011241;
+}
+
+.contact_form .form-group .form-control {
+	display: inline-block;
+	width: 100% !important;
+	height: 50px !important;
+	padding: 12px 15px 12px 15px !important;
+	outline: 0 !important;
+	border-radius: 6px !important;
+	background-color: #E1E9FF !important;
+	border: 1px solid transparent !important;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 400;
+	color: #011241 !important;
+}
+
+.contact_form .form-group .form-control::placeholder {
+	font-size: 18px;
+	font-weight: 400;
+	color: #8D97B1 !important;
+}
+
+.contact_form .wpcf7-form .form-group .form-control:focus {
+	background-color: #fff !important;
+	border: 1px solid #0334BF !important;
+	box-shadow: none !important;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 400;
+	color: #011241 !important;
+}
+
+.contact_form .form-group textarea.form-control {
+	resize: none;
+	height: auto !important;
+	padding: 12px 15px !important;
+}
+
+.contact_form .form-group .submitBtn {
+	display: inline-block;
+	width: 100%;
+	padding: 10px 20px !important;
+	background: #022179 !important;
+	border: 0px !important;
+	border-radius: 6px !important;
+	font-size: 18px !important;
+	line-height: 28px !important;
+	font-weight: 600;
+	color: #ffffff !important;
+	text-decoration: none;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	cursor: pointer;
+	text-align: center !important;
+}
+
+.contact_form .form-group .submitBtn:hover {
+	background-color: #55298B !important;
+	color: #fff !important;
+}
+
+.contact_form .form-group .wpcf7-spinner {
+	display: inline-block;
+	background-color: #ffffff !important;
+	opacity: 0.75 !important;
+	width: 24px !important;
+	height: 24px !important;
+	border: none !important;
+	border-radius: 100% !important;
+	padding: 0 !important;
+	margin: 10px 10px !important;
+	position: absolute;
+	right: 0;
+}
+
+.contact_form .form-group .wpcf7-spinner::before {
+	background-color: #281473;
+}
+
+/*------------- Clinical Trials pages -------------*/
+.et-db #et-boc #happenInStudySec .itemBox .et_pb_main_blurb_image {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.et-db #et-boc #happenInStudySec .itemBox .et_pb_main_blurb_image:before {
+	content: "";
+	width: calc(100% - 50px);
+	border: 1px solid #55298B;
+	position: absolute;
+	top: 50%;
+	left: 50px;
+}
+
+.et-db #et-boc #happenInStudySec .itemBox .et_pb_main_blurb_image:after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	border: 2px solid #55298B;
+	border-bottom: 0;
+	border-left: 0;
+	position: absolute;
+	top: calc(50% - 4px);
+	right: 0;
+	transform: rotate(45deg);
+}
+
+.et-db #et-boc #happenInStudySec .itemBox:last-child .et_pb_main_blurb_image:before {
+	display: none;
+}
+
+.et-db #et-boc #happenInStudySec .itemBox:last-child .et_pb_main_blurb_image:after {
+	display: none;
+}
+
+.et-db #et-boc #happenInStudySec .itemBox .et_pb_main_blurb_image .et_pb_image_wrap {
+	position: relative;
+	width: 50px;
+	padding: 7px;
+	border: 1px solid #55298B;
+	border-radius: 7px 7px 7px 7px;
+	overflow: visible;
+}
+
+.et-db #et-boc #happenInStudySec .itemBox .et_pb_main_blurb_image .et_pb_image_wrap:after {
+	content: "";
+	height: 15px;
+	border: 1px solid #55298B;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+}
+
+.et-db #et-boc #whatWillDoSec .itemBox h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 55px;
+	height: 55px;
+	padding: 0;
+	margin-bottom: 20px;
+	background-color: #55298B;
+	border-radius: 50px;
+	font-size: 30px;
+	color: #ffffff;
+	font-weight: 600;
+	line-height: 50px;
+}
+
+.et-db #et-boc #whatWillDoSec .itemBox h3 {
+	padding-bottom: 0;
+}
+
+.et-db #et-boc #whatWillDoSec .itemBox p {
+	padding-bottom: 0;
+	margin-top: 15px;
+}
+
+.et-db #et-boc #whoCanJoinSec .titleIcon h2 {
+	color: #ffffff !important;
+}
+
+.et-db #et-boc #whoCanJoinSec .titleIcon h2:before {
+	filter: brightness(0) invert(1);
+}
+
+.et-db #et-boc #whoCanJoinSec .titleIcon strong {
+	color: #ffffff !important;
+}
+
+.et-db #et-boc #whoCanJoinSec .itemBox .et_pb_main_blurb_image .et_pb_image_wrap {
+	width: 42px;
+	padding: 7px;
+	border: 1px solid #022179;
+	border-radius: 7px 7px 7px 7px;
+}
+
+.et-db #et-boc #whoCanJoinSec .et-last-child .itemBox .et_pb_main_blurb_image .et_pb_image_wrap {
+	border-color: #55298b;
+}
+
+.et-db #et-boc #whoCanJoinSec .et-last-child .itemBox .et_pb_main_blurb_image .et_pb_image_wrap img {
+	filter: invert(17%) sepia(79%) saturate(1863%) hue-rotate(251deg) brightness(93%) contrast(96%);
+}
+
+.et-db #et-boc #whoCanJoinSec .itemBox .et_pb_blurb_content {
+	display: flex;
+	# align-items: center;
+}
+
+.et-db #et-boc #whoCanJoinSec .itemBox .et_pb_blurb_content .et_pb_main_blurb_image {
+	width: 43px;
+	margin: 0;
+}
+
+.et-db #et-boc #whoCanJoinSec .itemBox .et_pb_blurb_content .et_pb_blurb_container {
+	width: calc(100% - 42px);
+}
+
+.et-db #et-boc #whoCanJoinSec .itemBox .et_pb_module_header {
+	padding-bottom: 0;
+	/* 	margin-top: 6px; */
+}
+
+.et-db #et-boc #whoCanJoinSec .itemBox p {
+	padding-bottom: 0;
+	margin-top: 10px;
+}
+
+.et-db #et-boc #benefitsOfJoiningSec .itemBox .et_pb_main_blurb_image {
+	margin-bottom: 20px;
+}
+
+.et-db #et-boc #whatTheRisksSec .itemBox {
+	margin: 25px 0 45px 0;
+}
+
+.et-db #et-boc #whatTheRisksSec .itemBox:last-child {
+	margin-bottom: 0;
+}
+
+.et-db #et-boc #whatTheRisksSec .itemBox.box1 {
+	margin-left: -20%;
+}
+
+.et-db #et-boc #whatTheRisksSec .itemBox.box2 {
+	margin-left: -10%;
+}
+
+.et-db #et-boc #whatTheRisksSec .itemBox.box3 {
+	margin-left: 0%;
+}
+
+.et-db #et-boc #whatTheRisksSec .itemBox .et_pb_main_blurb_image {
+	display: none;
+}
+
+.et-db #et-boc #whatTheRisksSec .itemBox .et_pb_main_blurb_image .et_pb_image_wrap {
+	width: 42px;
+	padding: 7px;
+	border: 1px solid #022179;
+	border-radius: 7px 7px 7px 7px;
+}
+
+.et-db #et-boc #whatTheRisksSec .itemBox .et_pb_module_header {
+	padding-bottom: 0;
+	margin-top: 6px;
+}
+
+.et-db #et-boc #whatTheRisksSec .itemBox p {
+	padding-bottom: 0;
+	margin-top: 10px;
+}
+
+.et-db #et-boc #howDoJoinSec .itemBox h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 55px;
+	height: 55px;
+	padding: 0;
+	margin-bottom: 20px;
+	background-color: #55298B;
+	border-radius: 50px;
+	font-size: 30px;
+	color: #ffffff;
+	font-weight: 600;
+	line-height: 50px;
+}
+
+.et-db #et-boc #howDoJoinSec .itemBox h3 {
+	padding-bottom: 0;
+}
+
+.et-db #et-boc #howDoJoinSec .itemBox p {
+	padding-bottom: 0;
+	margin-top: 15px;
+}
+
+.et-db #et-boc #whereStudyHappeningSec:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0 0 0 / 80%);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.et-db #et-boc #whereStudyHappeningSec .titleIcon {
+	display: flex;
+	justify-content: center;
+}
+
+.et-db #et-boc #whereStudyHappeningSec .titleIcon h2 {
+	color: #ffffff !important;
+}
+
+.et-db #et-boc #whereStudyHappeningSec .titleIcon h2:before {
+	filter: brightness(0) invert(1);
+}
+
+.et-db #et-boc #whereStudyHappeningSec .titleIcon strong {
+	color: #ffffff !important;
+}
+
+.et-db #et-boc #privacyImportantSec .itemBox {
+	margin: 0;
+}
+
+.et-db #et-boc #privacyImportantSec .itemBox:last-child {
+	margin-bottom: 0;
+}
+
+.et-db #et-boc #privacyImportantSec .itemBox.box1 {
+	margin-top: 35%;
+}
+
+.et-db #et-boc #privacyImportantSec .itemBox.box2 {
+	margin-top: 10%;
+}
+
+.et-db #et-boc #privacyImportantSec .itemBox.box3 {
+	margin-top: 30%;
+}
+
+.et-db #et-boc #privacyImportantSec .itemBox .et_pb_main_blurb_image {
+	display: none;
+}
+
+.et-db #et-boc #privacyImportantSec .itemBox .et_pb_main_blurb_image .et_pb_image_wrap {
+	width: 42px;
+	padding: 7px;
+	border: 1px solid #022179;
+	border-radius: 7px 7px 7px 7px;
+}
+
+.et-db #et-boc #privacyImportantSec .itemBox .et_pb_module_header {
+	padding-bottom: 0;
+	margin-top: 6px;
+}
+
+.et-db #et-boc #privacyImportantSec .itemBox p {
+	padding-bottom: 0;
+	margin-top: 10px;
+}
+
+.et-db #et-boc #haveQuestionsSec .buttonBlue {
+	display: inline-block;
+	padding: 10px 30px;
+	background-color: #022179;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	color: #FFFFFF;
+	font-weight: 600;
+	line-height: 1.4em;
+	transition: all .3s ease-in-out;
+}
+
+.et-db #et-boc #haveQuestionsSec .buttonBlue:hover {
+	background-color: #55298b;
+	color: #FFFFFF;
+}
+
+.et-db #et-boc #voluntaryParticipationSec .itemBox .et_pb_main_blurb_image {
+	margin-bottom: 20px;
+}
+
+/*------------- Kidney Cancer Treatment Pages -------------*/
+.et-db #et-boc .et_pb_section_8 .learnMoreRow .readyCol {
+	text-align: center;
+}
+
+.et-db #et-boc .et_pb_section_8 .learnMoreRow .readyCol .et_pb_button_module_wrapper.et_pb_button_1_wrapper {
+	margin-right: 20px !important;
+}
+
+.et-db #et-boc .et_pb_section_8 .learnMoreRow .readyCol .et_pb_button_module_wrapper {
+	display: inline-block;
+	margin: 0 !important;
+}

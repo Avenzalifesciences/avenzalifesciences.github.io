@@ -1,0 +1,227 @@
+@charset "utf-8";
+/* Table of Contents
+==================================================
+	#Desktop (1600)
+	#Desktop (1366)
+	#Desktop (1024)
+	#Tablet (Portrait)
+	#Mobile (Portrait)
+	#Mobile (Landscape)
+
+
+
+/* #Additional - Large Screens beyond 1600px
+================================================== */
+@media only screen and (min-width: 1367px) and (max-width: 1600px) {
+
+.container                                  { max-width: 1250px; }
+
+}
+
+
+
+/* #Additional - Large Screens beyond 1366px
+================================================== */
+@media only screen and (min-width: 1180px) and (max-width: 1366px) {
+
+.container                                  { max-width: 1250px; }
+
+.helpBox .et_pb_text_inner p 				{ font-size:17px; }
+
+}
+
+
+
+/* #iPad Pro - Large Screens beyond 1024px
+================================================== */
+@media only screen and (min-width: 959px) and (max-width: 1180px) {
+
+.container									{ max-width: 960px; }
+.et-db #et-boc .et-l .et_pb_row 			{ width: 95%!important; max-width: 960px!important; }
+
+.menuBox ul.nav li 						{ padding-left: 10px !important; padding-right: 10px !important; font-size: 17px!important; }
+
+.home .et-boc .serviceTop .et_pb_button_2_wrapper a.et_pb_button_2 { padding-right: 20px!important; padding-left: 20px!important; }
+.joinImgBox:before 							{ left: calc(-200px - var(--container-padding)); width: calc(150% + var(--container-padding)); height: 510px; background: url(../images/join-as-img1.jpg) top left no-repeat; }
+
+.patientTopSec .patientImgBox:before 		{ width: 350px; height: 200px; right: calc(-30% - var(--container-padding)); top: 15%; }
+.helpBox .et_pb_text_inner h3 				{ font-size: 22px!important; }
+.helpBox .et_pb_text_inner p 				{ min-height: 125px; }
+
+#benefitsBox .helpBox .et_pb_text_inner p 	{ min-height: 120px; }
+
+#joinAsBox:before 							{ right: calc(-160px - var(--container-padding)); width: calc(117% + var(--container-padding)); height: 380px; }
+
+.joinFormBox 								{ margin-top: 100px!important; }
+.joinFormBox .et_pb_row_4 					{ min-height: 480px!important; }
+
+/*------------- Clinical Trials pages -------------*/
+.et-db #et-boc #whatTheRisksSec .itemBox 	{ margin: 0 0 15px 0; }
+.et-db #et-boc #privacyImportantSec .itemBox.box1 { margin-top: 32%; }
+.et-db #et-boc #privacyImportantSec .itemBox.box2 { margin-top: 7%; }
+.et-db #et-boc #privacyImportantSec .itemBox.box3 { margin-top: 27%; }
+
+}
+
+
+
+/* #Tablet (Portrait)
+================================================== */
+/* Note: Design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+.container									{ max-width: 738px; }
+
+.et-db #et-boc .et-l .et_pb_row 			{ width: 95%!important; max-width: 738px!important; }
+
+#mobile_menu1 								{ width: 202%!important; position: absolute!important; left: -370px!important; border-top: 3px solid #55298B!important; }
+.et-db #et-boc .et-l .et_pb_menu_0_tb_header.et_pb_menu ul li.current-menu-item a 	{ background-color: #022179; color: #fff !important; }
+.et-db #et-boc .et-l .et_pb_menu_0_tb_header.et_pb_menu ul li a 					{ padding: 18px 3% !important; }
+.et-db #et-boc .mobile_nav.opened ul.et_mobile_menu li.menu-item 					{ color: #000000 !important; }
+.et-db #et-boc .mobile_nav.opened ul.et_mobile_menu li.menu-item > a 				{ color: #000000 !important; }
+.et-db #et-boc .mobile_nav.opened ul.et_mobile_menu li.menu-item > a:hover 			{ background-color: #022179!important; color: #fff !important; opacity: 1!important; }
+
+.logoBox									{ margin-bottom:0!important; }
+
+#sliderSec 									{ min-height: 450px; }
+
+.titleIcon h2:before 						{ top: 3px; }
+
+.joinImgBox 								{ min-height: 480px!important; }
+.joinImgBox:before 							{ top: 0; left: 0; width: 100%; height: 460px; background: url(../images/join-as-img1.jpg) top left no-repeat; background-size: cover; border-radius: 30px; }
+
+.patientSec .et_pb_image_wrap img 			{ width: 100%!important; height: auto!important; }
+
+
+
+/*------------- inner pages -------------*/
+.alignleft, .alignnone, .alignright, .aligncenter 	{ max-width: 50%; }
+
+#ourVisionBox 										{ width: 60%; padding: 15px !important; }
+
+.serviceIcon .et_pb_blurb_content					{ max-width: 100% !important; }
+.serviceBox .et_pb_column 							{ border-bottom: 1px solid #c3d2fe !important; padding-bottom: 20px !important;	margin-bottom: 20px !important; }
+.serviceBox:last-child .et_pb_column 				{ border-bottom: 0px solid #c3d2fe !important; padding-bottom: 20px !important;	margin-bottom: 0px !important; }
+
+.helpSec 											{ justify-content: space-between !important; grid-column-gap: 25px; }
+.helpSec .et_pb_column_1_4 							{ width: 48% !important; height: 100%; margin-right: 0 !important; }
+.helpBox .et_pb_text_inner h3 						{ padding-bottom: 20px !important; min-height: 80px; }
+.helpBox .et_pb_text_inner p 						{ min-height: 90px; }
+
+.patientTopSec .patientImgBox:before 				{ width: 530px; height: 250px; right: calc(-50% - var(--container-padding)); top: 58%; }
+
+#joinAsBox:before 									{ bottom: -90%; right: calc(-270px - var(--container-padding)); width: calc(137% + var(--container-padding)); height: 230px; }
+
+/*------------- Clinical Trials pages -------------*/
+.et-db #et-boc #happenInStudySec .itemBox .et_pb_main_blurb_image:before { display: none; }
+.et-db #et-boc #happenInStudySec .itemBox .et_pb_main_blurb_image:after { display: none; }
+.et-db #et-boc #whatTheRisksSec .itemBox 			{ margin: 0 0 30px 0; }
+.et-db #et-boc #whatTheRisksSec .itemBox.box1 		{ margin-left: 0%; }
+.et-db #et-boc #whatTheRisksSec .itemBox.box2 		{ margin-left: 0%; }
+.et-db #et-boc #whatTheRisksSec .itemBox.box3 		{ margin-left: 0%;}
+.et-db #et-boc #whatTheRisksSec .itemBox .et_pb_main_blurb_image { display: table-cell; }
+.et-db #et-boc #privacyImportantSec .mobileRow 		{ display: flex; flex-direction: column; }
+.et-db #et-boc #privacyImportantSec .mobileRow .mobileColumn1 { order: 1; }
+.et-db #et-boc #privacyImportantSec .mobileRow .mobileColumn2 { order: 2; }
+.et-db #et-boc #privacyImportantSec .mobileRow .mobileColumn3 { order: 3; }
+.et-db #et-boc #privacyImportantSec .itemBox 		{ margin: 0 0 30px 0; }
+.et-db #et-boc #privacyImportantSec .itemBox.box1 	{ margin-top: 0%; }
+.et-db #et-boc #privacyImportantSec .itemBox.box2 	{ margin-top: 0%; }
+.et-db #et-boc #privacyImportantSec .itemBox.box3 	{ margin-top: 0%; }
+.et-db #et-boc #privacyImportantSec .itemBox .et_pb_main_blurb_image { display: table-cell; }
+
+
+/*------------- Kidney Cancer Treatment Pages -------------*/
+#howDoJoinSec .amEligibleRow .et_pb_column 			{ gap: 20px; }
+#howDoJoinSec .amEligibleRow .et_pb_column .itemBox { width: 100%; }
+
+
+}
+
+
+
+/*  #Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+
+.container									{ width: auto; margin: 0 15px; }
+.et-db #et-boc .et-l .et_pb_row 			{ width: 92% !important; max-width: 92% !important; }
+
+.et-db #et-boc header #header .logoBox		{ margin-bottom: 0; }
+
+#mobile_menu1 								{ width: 264%!important; position: absolute!important; left: -207px!important; border-top: 3px solid #55298B!important; }
+.et-db #et-boc .et-l .et_pb_menu_0_tb_header.et_pb_menu ul li.current-menu-item a { background-color: #022179; color: #fff !important; }
+.et-db #et-boc .mobile_nav.opened ul.et_mobile_menu li.menu-item 		{ color: #000000 !important; }
+.et-db #et-boc .mobile_nav.opened ul.et_mobile_menu li.menu-item > a 	{ color: #000000 !important; }
+.et-db #et-boc .mobile_nav.opened ul.et_mobile_menu li.menu-item > a:hover 	{ background-color: #022179!important; color: #fff !important; opacity: 1!important; }
+
+#sliderSec 									{ min-height: 450px; }
+
+.titleIcon h2:before 						{ top: 0px; }
+
+.joinImgBox  								{ min-height: 230px!important; }
+.joinImgBox:before 							{ left: 0; width: 100%; height: 220px; border-radius: 15px; }
+.serviceTop 								{ align-items: flex-start; flex-direction: column; }
+
+.reachList ul 								{ align-items: center; justify-content: space-between; flex-direction: column; grid-gap: 15px; }
+.reachList ul li:before 					{ top: 10px; right: inherit; left: -25px; }
+.reachList ul li:last-child:before 			{ display:inline-block; }
+
+#footerSec .footerLink ul li a 				{ font-size: 14px !important; line-height: 14px !important; }
+
+/*------------- inner pages -------------*/
+.alignleft, .alignnone, .alignright, .aligncenter { float: none; display: block; max-width: 100%; height: auto; margin: 0 0 20px 0; }
+.responsive-table							{ display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+
+
+#sliderSec.innerBanner 						{ min-height: 300px; }
+#ourVisionBox 								{ width: 100%; padding: 15px !important; border-radius: 20px !important; position: relative; bottom: 0; right: 0; }
+
+.patientTopSec .patientImgBox:before		{ display:none; }
+
+/*.serviceIcon .et_pb_blurb_content			{ border-bottom: 1px solid #c3d2fe !important; padding-bottom: 25px !important; }*/
+.serviceBox .et_pb_column 					{ border-bottom: 1px solid #c3d2fe !important; padding-bottom: 20px !important;	margin-bottom: 20px !important; }
+.serviceBox:last-child .et_pb_column 		{ border-bottom: 0px solid #c3d2fe !important; padding-bottom: 20px !important;	margin-bottom: 0px !important; }
+
+#aboutSec.joinAsSec 						{ margin-bottom: 110px !important; }
+#joinAsBox:before 							{ bottom: -230px; right: 0; width: 100%; height: 200px; border-radius: 0 0px 0 40px; }
+
+/*------------- Clinical Trials pages -------------*/
+.et-db #et-boc #happenInStudySec .itemBox .et_pb_main_blurb_image:before { display: none; }
+.et-db #et-boc #happenInStudySec .itemBox .et_pb_main_blurb_image:after { display: none; }
+.et-db #et-boc #whatTheRisksSec .itemBox 			{ margin: 0 0 30px 0; }
+.et-db #et-boc #whatTheRisksSec .itemBox.box1 		{ margin-left: 0%; }
+.et-db #et-boc #whatTheRisksSec .itemBox.box2 		{ margin-left: 0%; }
+.et-db #et-boc #whatTheRisksSec .itemBox.box3 		{ margin-left: 0%;}
+.et-db #et-boc #whatTheRisksSec .itemBox .et_pb_main_blurb_image { display: table-cell; }
+.et-db #et-boc #privacyImportantSec .mobileRow 		{ display: flex; flex-direction: column; }
+.et-db #et-boc #privacyImportantSec .mobileRow .mobileColumn1 { order: 1; }
+.et-db #et-boc #privacyImportantSec .mobileRow .mobileColumn2 { order: 2; }
+.et-db #et-boc #privacyImportantSec .mobileRow .mobileColumn3 { order: 3; }
+.et-db #et-boc #privacyImportantSec .itemBox 		{ margin: 0 0 30px 0; }
+.et-db #et-boc #privacyImportantSec .itemBox.box1 	{ margin-top: 0%; }
+.et-db #et-boc #privacyImportantSec .itemBox.box2 	{ margin-top: 0%; }
+.et-db #et-boc #privacyImportantSec .itemBox.box3 	{ margin-top: 0%; }
+.et-db #et-boc #privacyImportantSec .itemBox .et_pb_main_blurb_image { display: table-cell; }
+	
+/*------------- Kidney Cancer Treatment Pages -------------*/
+.et-db #et-boc .et_pb_section_8 .learnMoreRow .readyCol .et_pb_button_module_wrapper.et_pb_button_1_wrapper { margin-right: 0 !important; margin-bottom: 20px !important; }
+
+#howDoJoinSec .amEligibleRow .et_pb_column 			{ gap: 20px; }
+#howDoJoinSec .amEligibleRow .et_pb_column .itemBox { width: 100%; }
+	
+}
+
+
+
+/* #Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+.container									{ /*width: 540px;*/ width: auto; margin: 0 15px; }
+
+
+
+}
