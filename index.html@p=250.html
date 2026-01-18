@@ -319,7 +319,143 @@ gtag("config", "GT-NGK4VZHB");
 			</div> <!-- .et_pb_column -->
 				
 			</div> <!-- .et_pb_row -->
-				
+			<div class="et_pb_code_inner">
+  <div class="wpcf7 no-js" id="wpcf7-f700-p250-o1" lang="en-US" dir="ltr" data-wpcf7-id="700">
+    <div class="screen-reader-response">
+      <p role="status" aria-live="polite" aria-atomic="true"></p>
+      <ul></ul>
+    </div>
+
+    <form
+      id="avenzaJoinForm"
+      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfHYBYe1DzG2iWSNTiUJJMF6a_FGhn3Nn7oEp6SZRqqZXiL_w/formResponse"
+      method="POST"
+      class="wpcf7-form init"
+      aria-label="Contact form"
+      novalidate="novalidate"
+      data-status="init"
+    >
+      <h3>Join <strong>ACTioN</strong> Today!</h3>
+
+      <div class="form-group">
+        <label>Full Name *</label>
+        <span class="wpcf7-form-control-wrap" data-name="entry.851661271">
+          <input
+            size="40" maxlength="400"
+            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
+            type="text"
+            name="entry.851661271"
+            required
+          />
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label>Clinical Rooms/ Site Address *</label>
+        <span class="wpcf7-form-control-wrap" data-name="entry.1728439217">
+          <input
+            size="40" maxlength="400"
+            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
+            type="text"
+            name="entry.1728439217"
+            required
+          />
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label>Medical Specialty *</label>
+        <span class="wpcf7-form-control-wrap" data-name="entry.1092341170">
+          <input
+            size="40" maxlength="400"
+            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
+            type="text"
+            name="entry.1092341170"
+            required
+          />
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <span class="wpcf7-form-control-wrap" data-name="entry.535896028">
+          <textarea
+            cols="40" rows="3" maxlength="2000"
+            class="wpcf7-form-control wpcf7-textarea form-control"
+            placeholder="Write Full Description"
+            name="entry.535896028"
+            required
+          ></textarea>
+        </span>
+      </div>
+
+      <div class="form-group">
+        <input class="wpcf7-form-control wpcf7-submit has-spinner submitBtn" type="submit" value="Send Message" />
+      </div>
+
+      <!-- keep CF7 response area so UI looks identical -->
+      <div class="wpcf7-response-output" aria-hidden="true" id="avenzaJoinMsg" style="display:block;"></div>
+    </form>
+  </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("avenzaJoinForm");
+    if (!form) return;
+
+    // If old CF7 JS exists anywhere, make sure it doesn't hijack this form
+    form.classList.remove("wpcf7-form"); // optional safety
+    form.classList.add("wpcf7-form");
+
+    const msg = document.getElementById("avenzaJoinMsg");
+    const btn = form.querySelector('input[type="submit"]');
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      if (msg) {
+        msg.textContent = "";
+        msg.style.color = "";
+      }
+
+      if (!form.checkValidity()) {
+        if (msg) {
+          msg.textContent = "Please fill all required fields.";
+          msg.style.color = "#b00020";
+        }
+        return;
+      }
+
+      const fd = new FormData(form);
+
+      // UI feedback
+      const original = btn ? btn.value : "Send Message";
+      if (btn) { btn.value = "Sending..."; btn.disabled = true; }
+
+      try {
+        await fetch(form.action, {
+          method: "POST",
+          mode: "no-cors",
+          body: fd
+        });
+
+        if (msg) {
+          msg.textContent = "Thank you! Your message has been submitted.";
+          msg.style.color = "#0a7a2f";
+        }
+        form.reset();
+      } catch (err) {
+        if (msg) {
+          msg.textContent = "Submission failed. Please try again.";
+          msg.style.color = "#b00020";
+        }
+      } finally {
+        if (btn) { btn.value = original; btn.disabled = false; }
+      }
+    });
+  });
+  </script>
+</div>
 				
 			</div> <!-- .et_pb_section -->		</div><!-- .et_builder_inner_content -->
 	</div><!-- .et-l -->
