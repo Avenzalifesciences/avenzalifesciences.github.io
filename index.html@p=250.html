@@ -318,144 +318,62 @@ gtag("config", "GT-NGK4VZHB");
 			</div> <!-- .et_pb_text -->
 			</div> <!-- .et_pb_column -->
 				
-<style>
-    /* Styling to match the uploaded reference image exactly */
-    .avenza-card {
-        max-width: 440px;
-        margin: 20px auto;
-        padding: 35px;
-        background: #ffffff;
-        border-radius: 24px; /* Soft rounded corners from image */
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        border: 1px solid #eef2ff;
-    }
-
-    .avenza-card h3 {
-        font-size: 26px;
-        margin-bottom: 25px;
-        color: #1a1a1a;
-        font-weight: 500;
-        letter-spacing: -0.5px;
-    }
-
-    /* Matching the purple 'io' branding in the image */
-    .accent-purple {
-        color: #a389d4; 
-    }
-
-    .form-group {
-        margin-bottom: 22px;
-    }
-
-    .form-group label {
-        display: block;
-        font-weight: 600;
-        margin-bottom: 10px;
-        font-size: 15px;
-        color: #333;
-    }
-
-    /* Matching the light blue tinted inputs from image_437820.png */
-    .avenza-input {
-        width: 100%;
-        padding: 14px 18px;
-        background-color: #eef2ff; /* Specific light blue tint */
-        border: 1px solid transparent;
-        border-radius: 12px;
-        box-sizing: border-box;
-        font-size: 16px;
-        color: #333;
-    }
-
-    .avenza-input::placeholder {
-        color: #999;
-    }
-
-    .avenza-input:focus {
-        outline: none;
-        background-color: #fff;
-        border: 1.5px solid #004a99;
-    }
-
-    .avenza-btn {
-        width: 100%;
-        padding: 15px;
-        cursor: pointer;
-        background-color: #004a99; /* Professional Blue */
-        color: white;
-        border: none;
-        border-radius: 12px;
-        font-weight: bold;
-        font-size: 16px;
-        transition: background 0.3s ease;
-    }
-
-    .avenza-btn:hover {
-        background-color: #003366;
-    }
-
-    /* Success Message UI */
-    #success-box {
-        display: none;
-        text-align: center;
-        padding: 20px;
-    }
-</style>
-
 <div class="et_pb_code_inner">
-    <div class="avenza-card">
-        
-        <div id="success-box">
-            <h2 style="color: #2ecc71;">✓ Success!</h2>
-            <p>Your message has been sent to Avenza Life Sciences.</p>
-            <button onclick="window.location.reload()" class="avenza-btn" style="background: #444; margin-top: 15px;">Send Another</button>
-        </div>
-
-        <div id="form-content">
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSfHYBYe1DzG2iWSNTiUJJMF6a_FGhn3Nn7oEp6SZRqqZXiL_w/formResponse" 
-                  method="POST" 
-                  target="hidden_iframe" 
-                  id="avenza-google-form"
-                  onsubmit="submitted=true; showThankYou();">
-                
-                <h3>Join ACT<span class="accent-purple">io</span>N Today!</h3>
-
+    <div class="wpcf7">
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfHYBYe1DzG2iWSNTiUJJMF6a_FGhn3Nn7oEp6SZRqqZXiL_w/formResponse" 
+              method="POST" 
+              target="hidden_iframe" 
+              id="avenza-google-form"
+              class="wpcf7-form"
+              style="max-width: 600px; margin: 0 auto;">
+            
+            <h3>Join <strong>ACTioN</strong> Today!</h3>
+            
+            <div id="thank-you-message" style="display:none; background-color: #d4edda; color: #155724; padding: 15px; border-radius: 4px; margin-bottom: 20px; text-align: center;">
+                <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you soon.
+            </div>
+            
+            <div id="form-fields">
                 <div class="form-group">
                     <label>Full Name *</label> 
-                    <input type="text" name="entry.851661271" class="avenza-input" required placeholder="Enter your full name">
+                    <input type="text" name="entry.851661271" class="form-control" required placeholder="Enter your full name">
                 </div>
-
                 <div class="form-group">
                     <label>Clinical Rooms/ Site Address *</label> 
-                    <input type="text" name="entry.1728439217" class="avenza-input" required placeholder="Enter address">
+                    <input type="text" name="entry.1728439217" class="form-control" required placeholder="Enter address">
                 </div>
-
                 <div class="form-group">
                     <label>Medical Specialty *</label> 
-                    <input type="text" name="entry.1092341170" class="avenza-input" required placeholder="Enter specialty">
+                    <input type="text" name="entry.1092341170" class="form-control" required placeholder="Enter specialty">
                 </div>
-
                 <div class="form-group">
                     <label>Message</label> 
-                    <textarea name="entry.535896028" class="avenza-input" rows="3" placeholder="Write Full Description"></textarea>
+                    <textarea name="entry.535896028" class="form-control" rows="3" placeholder="Write Full Description"></textarea>
                 </div>
-
-                <button type="submit" class="avenza-btn">Send Message</button>
-            </form>
-        </div>
-
+                <div class="form-group">
+                    <button type="submit" class="submitBtn" style="width:100%; padding: 10px; cursor:pointer; background-color: #007bff; color: white; border: none; border-radius: 4px;">
+                        Send Message
+                    </button>
+                </div>
+            </div>
+        </form>
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
     </div>
 </div>
-
 <script type="text/javascript">
     var submitted = false;
-    function showThankYou() {
-        // Instantly switch views upon clicking submit
-        document.getElementById('form-content').style.display = 'none';
-        document.getElementById('success-box').style.display = 'block';
-    }
+    
+    document.getElementById('avenza-google-form').onsubmit = function() {
+        submitted = true;
+    };
+    
+    document.getElementById('hidden_iframe').onload = function() {
+        if(submitted) {
+            document.getElementById('form-fields').style.display = 'none';
+            document.getElementById('thank-you-message').style.display = 'block';
+            submitted = false;
+        }
+    };
 </script>
 		</div> <!-- .et_pb_section -->		</div><!-- .et_builder_inner_content -->
 	</div><!-- .et-l -->
