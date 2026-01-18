@@ -245,64 +245,61 @@ gtag("config", "GT-NGK4VZHB");
 				<div class="et_pb_with_border et_pb_module et_pb_code et_pb_code_1 contact_form">
 				
 <div class="et_pb_code_inner">
-    <div class="wpcf7 no-js" id="wpcf7-f8-p16-o1" lang="en-US" dir="ltr" data-wpcf7-id="8">
-        <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-        
+    <div class="wpcf7">
         <form action="https://docs.google.com/forms/d/e/1FAIpQLSd3ReBXcWnKqdgy7uK9iMxCRsv1HilyLEhydNYXamCl6oLJaw/formResponse" 
               method="POST" 
-              class="wpcf7-form init" 
-              target="contact_hidden_iframe"
-              onsubmit="alert('Your message has been sent successfully to Avenza Life Sciences.');">
-
+              target="hidden_iframe" 
+              id="avenza-contact-form"
+              class="wpcf7-form">
+            
             <div class="form-group">
                 <label>Full Name *</label> 
-                <span class="wpcf7-form-control-wrap">
-                    <input class="wpcf7-form-control form-control" type="text" name="entry.1746208882" required />
-                </span>
+                <input type="text" name="entry.1372733795" class="form-control" required placeholder="Enter your full name">
             </div>
 
             <div class="form-group">
                 <label>Email Address *</label> 
-                <span class="wpcf7-form-control-wrap">
-                    <input class="wpcf7-form-control form-control" type="email" name="entry.1818224970" required />
-                </span>
+                <input type="email" name="entry.2106597608" class="form-control" required placeholder="Enter your email address">
             </div>
 
             <div class="form-group">
                 <label>Phone Number *</label> 
-                <span class="wpcf7-form-control-wrap">
-                    <input class="wpcf7-form-control form-control" type="tel" name="entry.172909405" required />
-                </span>
+                <input type="tel" name="entry.1914061546" class="form-control" required placeholder="Enter your phone number">
             </div>
 
             <div class="form-group">
-                <label>Purpose of Contact</label> 
-                <span class="wpcf7-form-control-wrap">
-                    <select class="wpcf7-form-control form-control" name="entry.318850689">
-                        <option value="Select your purpose of contact">Select your purpose of contact</option>
-                        <option value="Patient Enquiry">Patient Enquiry</option>
-                        <option value="PI or Clinical Site Enquiry">PI or Clinical Site Enquiry</option>
-                        <option value="Vendor Enquiry">Vendor Enquiry</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </span>
+                <label>Purpose of Contact *</label> 
+                <select name="entry.226121283" class="form-control" required>
+                    <option value="">Select your purpose of contact</option>
+                    <option value="Patient Enquiry">Patient Enquiry</option>
+                    <option value="PI or Clinical Site Enquiry">PI or Clinical Site Enquiry</option>
+                    <option value="Vendor Enquiry">Vendor Enquiry</option>
+                    <option value="Other">Other</option>
+                </select>
             </div>
 
             <div class="form-group">
                 <label>Message</label> 
-                <span class="wpcf7-form-control-wrap">
-                    <textarea class="wpcf7-form-control form-control" name="entry.1983570678" rows="3"></textarea>
-                </span>
+                <textarea name="entry.1983570678" class="form-control" rows="3" placeholder="Write your message"></textarea>
             </div>
 
             <div class="form-group">
-                <input class="wpcf7-form-control wpcf7-submit submitBtn" type="submit" value="Send Message" />
+                <button type="submit" class="submitBtn" style="width:100%; padding: 12px; cursor:pointer; background-color: #007bff; color: white; border: none; border-radius: 4px; font-weight: bold; margin-top: 10px;">
+                    Send Message
+                </button>
             </div>
         </form>
 
-        <iframe name="contact_hidden_iframe" id="contact_hidden_iframe" style="display:none;"></iframe>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {alert('Message Sent Successfully!'); window.location.reload();}"></iframe>
     </div>
 </div>
+
+<script type="text/javascript">
+    var submitted = false;
+    document.getElementById('avenza-contact-form').onsubmit = function() {
+        submitted = true;
+    };
+</script>
 				</div> </div> </div> </div> </div></div><footer class="et-l et-l--footer">
 			<div class="et_builder_inner_content et_pb_gutters3"><div id="footerSec" class="et_pb_section et_pb_section_0_tb_footer et_pb_with_background et_section_regular et_section_transparent" >
 				
