@@ -318,181 +318,53 @@ gtag("config", "GT-NGK4VZHB");
 			</div> <!-- .et_pb_text -->
 			</div> <!-- .et_pb_column -->
 				
-<!-- JOIN FORM SECTION (Google Forms backend, keeps Divi layout/style) -->
-</div> <!-- .et_pb_row -->
-</div> <!-- .et_pb_section -->
+<div class="et_pb_code_inner">
+    <div class="wpcf7">
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfHYBYe1DzG2iWSNTiUJJMF6a_FGhn3Nn7oEp6SZRqqZXiL_w/formResponse" 
+              method="POST" 
+              target="hidden_iframe" 
+              id="avenza-google-form"
+              class="wpcf7-form">
+            
+            <h3>Join <strong>ACTioN</strong> Today!</h3>
 
-<div class="et_pb_section et_pb_section_3 joinFormBox et_pb_with_background et_section_regular et_section_transparent">
-  <div class="et_pb_row et_pb_row_4">
-    <div class="et_pb_column et_pb_column_2_5 et_pb_column_8 et_pb_css_mix_blend_mode_passthrough">
-
-      <div class="et_pb_with_border et_pb_module et_pb_code et_pb_code_1 contact_form">
-        <div class="et_pb_code_inner">
-
-          <!-- Keep CF7 wrapper classes for styling -->
-          <div class="wpcf7 no-js" id="wpcf7-f700-p250-o1" lang="en-US" dir="ltr">
-            <div class="screen-reader-response">
-              <p role="status" aria-live="polite" aria-atomic="true"></p>
-              <ul></ul>
+            <div class="form-group">
+                <label>Full Name *</label> 
+                <input type="text" name="entry.851661271" class="form-control" required placeholder="Enter your full name">
             </div>
 
-            <!-- REAL FORM (Google Forms) -->
-            <form
-              id="avenzaJoinForm"
-              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfHYBYe1DzG2iWSNTiUJJMF6a_FGhn3Nn7oEp6SZRqqZXiL_w/formResponse"
-              method="POST"
-              class="wpcf7-form init"
-              aria-label="Join as a PI form"
-              novalidate
-            >
-              <h3>Join <strong>ACTioN</strong> Today!</h3>
+            <div class="form-group">
+                <label>Clinical Rooms/ Site Address *</label> 
+                <input type="text" name="entry.1728439217" class="form-control" required placeholder="Enter address">
+            </div>
 
-              <div class="form-group">
-                <label>Full Name *</label>
-                <span class="wpcf7-form-control-wrap" data-name="entry.851661271">
-                  <input
-                    size="40"
-                    maxlength="400"
-                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                    aria-required="true"
-                    aria-invalid="false"
-                    value=""
-                    type="text"
-                    name="entry.851661271"
-                    required
-                  />
-                </span>
-              </div>
+            <div class="form-group">
+                <label>Medical Specialty *</label> 
+                <input type="text" name="entry.1092341170" class="form-control" required placeholder="Enter specialty">
+            </div>
 
-              <div class="form-group">
-                <label>Clinical Rooms/ Site Address *</label>
-                <span class="wpcf7-form-control-wrap" data-name="entry.1728439217">
-                  <input
-                    size="40"
-                    maxlength="400"
-                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                    aria-required="true"
-                    aria-invalid="false"
-                    value=""
-                    type="text"
-                    name="entry.1728439217"
-                    required
-                  />
-                </span>
-              </div>
+            <div class="form-group">
+                <label>Message</label> 
+                <textarea name="entry.535896028" class="form-control" rows="3" placeholder="Write Full Description"></textarea>
+            </div>
 
-              <div class="form-group">
-                <label>Medical Specialty *</label>
-                <span class="wpcf7-form-control-wrap" data-name="entry.1092341170">
-                  <input
-                    size="40"
-                    maxlength="400"
-                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                    aria-required="true"
-                    aria-invalid="false"
-                    value=""
-                    type="text"
-                    name="entry.1092341170"
-                    required
-                  />
-                </span>
-              </div>
+            <div class="form-group">
+                <button type="submit" class="submitBtn" style="width:100%; padding: 10px; cursor:pointer; background-color: #007bff; color: white; border: none; border-radius: 4px;">
+                    Send Message
+                </button>
+            </div>
+        </form>
 
-              <div class="form-group">
-                <label>Message *</label>
-                <span class="wpcf7-form-control-wrap" data-name="entry.535896028">
-                  <textarea
-                    cols="40"
-                    rows="3"
-                    maxlength="2000"
-                    class="wpcf7-form-control wpcf7-textarea form-control"
-                    aria-invalid="false"
-                    placeholder="Write Full Description"
-                    name="entry.535896028"
-                    required
-                  ></textarea>
-                </span>
-              </div>
-
-              <div class="form-group">
-                <input
-                  class="wpcf7-form-control wpcf7-submit has-spinner submitBtn"
-                  type="submit"
-                  value="Send Message"
-                />
-              </div>
-
-              <!-- Message area (keeps CF7 styling) -->
-              <div class="wpcf7-response-output" aria-hidden="true" style="display:none;"></div>
-            </form>
-
-          </div>
-
-          <!-- Submit handler (no layout change; works on GitHub Pages) -->
-          <script id="avenzaJoinFormHandler">
-          (function(){
-            document.addEventListener("DOMContentLoaded", function(){
-              var form = document.getElementById("avenzaJoinForm");
-              if(!form) return;
-
-              var btn = form.querySelector('input[type="submit"], button[type="submit"]');
-              var msg = form.querySelector(".wpcf7-response-output");
-
-              function showMessage(text, ok){
-                if(!msg) return;
-                msg.style.display = "block";
-                msg.setAttribute("aria-hidden", "false");
-                msg.textContent = text;
-                msg.style.color = ok ? "#0a7a2f" : "#b00020";
-              }
-
-              form.addEventListener("submit", function(e){
-                e.preventDefault();
-
-                // HTML5 required validation
-                if(!form.checkValidity()){
-                  showMessage("Please fill all required fields.", false);
-                  return;
-                }
-
-                var fd = new FormData(form);
-                if(btn){
-                  btn.disabled = true;
-                  if(btn.value) btn.value = "Sending...";
-                }
-
-                // Google Forms accepts POST, but response is opaque (no-cors)
-                fetch(form.action, { method: "POST", mode: "no-cors", body: fd })
-                  .then(function(){
-                    showMessage("Thank you! Your message has been submitted.", true);
-                    form.reset();
-                  })
-                  .catch(function(){
-                    showMessage("Submission failed. Please try again.", false);
-                  })
-                  .finally(function(){
-                    if(btn){
-                      btn.disabled = false;
-                      if(btn.value) btn.value = "Send Message";
-                    }
-                  });
-              });
-            });
-          })();
-          </script>
-
-        </div>
-      </div>
-
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location.reload(); alert('Message Sent Successfully!');}"></iframe>
     </div>
-
-    <!-- Right column remains empty (keeps original alignment/spacing) -->
-    <div class="et_pb_column et_pb_column_3_5 et_pb_column_9 et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column_empty">
-    </div>
-
-  </div>
 </div>
-<!-- END JOIN FORM SECTION -->
+
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+    document.getElementById('avenza-google-form').onsubmit = function() {
+        submitted = true;
+    };
+</script>
 
 		</div> <!-- .et_pb_section -->		</div><!-- .et_builder_inner_content -->
 	</div><!-- .et-l -->
