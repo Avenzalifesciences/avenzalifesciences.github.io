@@ -325,7 +325,7 @@ gtag("config", "GT-NGK4VZHB");
               target="hidden_iframe" 
               id="avenza-google-form"
               class="wpcf7-form"
-              style="max-width: 600px; margin: 0 auto;">
+              style="max-width: 300px; margin: 0 auto;">
             
             <h3>Join <strong>ACTioN</strong> Today!</h3>
             
@@ -361,19 +361,13 @@ gtag("config", "GT-NGK4VZHB");
     </div>
 </div>
 <script type="text/javascript">
-    var submitted = false;
-    
-    document.getElementById('avenza-google-form').onsubmit = function() {
-        submitted = true;
-    };
-    
-    document.getElementById('hidden_iframe').onload = function() {
-        if(submitted) {
+    document.getElementById('avenza-google-form').addEventListener('submit', function() {
+        setTimeout(function() {
             document.getElementById('form-fields').style.display = 'none';
             document.getElementById('thank-you-message').style.display = 'block';
-            submitted = false;
-        }
-    };
+            document.getElementById('avenza-google-form').reset();
+        }, 1000);
+    });
 </script>
 		</div> <!-- .et_pb_section -->		</div><!-- .et_builder_inner_content -->
 	</div><!-- .et-l -->
