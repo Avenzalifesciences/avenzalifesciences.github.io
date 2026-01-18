@@ -319,83 +319,136 @@ gtag("config", "GT-NGK4VZHB");
 			</div> <!-- .et_pb_column -->
 				
 <style>
-    /* This centers the form and limits its width */
+    /* Styling to match the uploaded image */
     .form-container-wrapper {
-        max-width: 500px; /* Adjust this number to make it narrower or wider */
-        margin: 0 auto;  /* Centers it on the page */
-        padding: 20px;
+        max-width: 420px; /* Reduced width based on image reference */
+        margin: 20px auto;
+        padding: 30px;
         background: #ffffff;
-        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        border-radius: 20px; /* Matching the soft rounded corners in image */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    /* Styling the success message (hidden by default) */
+    .form-container-wrapper h3 {
+        font-size: 24px;
+        margin-bottom: 25px;
+        color: #1a1a1a;
+        text-align: left; /* Aligned left like the image */
+    }
+
+    .form-container-wrapper h3 strong {
+        color: #6a4fa3; /* Matching the purple 'io' accent color */
+    }
+
+    .form-group { margin-bottom: 20px; }
+
+    .form-group label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 8px;
+        font-size: 15px;
+        color: #333;
+    }
+
+    /* Matching the light blue tinted input boxes from your image */
+    .form-control {
+        width: 100%;
+        padding: 12px 15px;
+        background-color: #eef2ff; /* Light blue tint */
+        border: 1px solid transparent;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+        transition: border 0.3s ease;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border: 1px solid #004a99;
+        background-color: #fff;
+    }
+
+    /* Success Message Styling */
     #thank-you-message {
         display: none;
         text-align: center;
-        padding: 40px 20px;
+        padding: 20px 0;
     }
-    
-    #thank-you-message h2 { color: #2ecc71; }
+
+    .success-icon {
+        font-size: 50px;
+        color: #2ecc71;
+        margin-bottom: 15px;
+    }
+
+    .submitBtn {
+        width: 100%;
+        padding: 14px;
+        cursor: pointer;
+        background-color: #004a99; /* Avenza Blue */
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 10px;
+    }
 </style>
 
 <div class="form-container-wrapper">
     <div id="thank-you-message">
-        <h2>✓ Thank You!</h2>
-        <p>Your message has been sent to Avenza Life Sciences. We will get back to you shortly.</p>
-        <button onclick="location.reload()" class="submitBtn" style="background:#444;">Send Another</button>
+        <div class="success-icon">✓</div>
+        <h2>Thank You!</h2>
+        <p>Your details have been submitted successfully to Avenza Life Sciences.</p>
+        <p style="font-size: 0.9em; color: #666;">You can now close this window or continue browsing.</p>
     </div>
 
     <div id="form-body">
-        <div class="wpcf7">
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSfHYBYe1DzG2iWSNTiUJJMF6a_FGhn3Nn7oEp6SZRqqZXiL_w/formResponse" 
-                  method="POST" 
-                  target="hidden_iframe" 
-                  id="avenza-google-form"
-                  onsubmit="showSuccess()">
-                
-                <h3 style="text-align: center;">Join <strong>ACTioN</strong> Today!</h3>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfHYBYe1DzG2iWSNTiUJJMF6a_FGhn3Nn7oEp6SZRqqZXiL_w/formResponse" 
+              method="POST" 
+              target="hidden_iframe" 
+              id="avenza-google-form"
+              onsubmit="return showSuccess()">
+            
+            <h3>Join <strong>ACTioN</strong> Today!</h3>
 
-                <div class="form-group">
-                    <label>Full Name *</label> 
-                    <input type="text" name="entry.851661271" class="form-control" required>
-                </div>
+            <div class="form-group">
+                <label>Full Name *</label> 
+                <input type="text" name="entry.851661271" class="form-control" required>
+            </div>
 
-                <div class="form-group">
-                    <label>Clinical Rooms/ Site Address *</label> 
-                    <input type="text" name="entry.1728439217" class="form-control" required>
-                </div>
+            <div class="form-group">
+                <label>Clinical Rooms/ Site Address *</label> 
+                <input type="text" name="entry.1728439217" class="form-control" required>
+            </div>
 
-                <div class="form-group">
-                    <label>Medical Specialty *</label> 
-                    <input type="text" name="entry.1092341170" class="form-control" required>
-                </div>
+            <div class="form-group">
+                <label>Medical Specialty *</label> 
+                <input type="text" name="entry.1092341170" class="form-control" required>
+            </div>
 
-                <div class="form-group">
-                    <label>Message</label> 
-                    <textarea name="entry.535896028" class="form-control" rows="3"></textarea>
-                </div>
+            <div class="form-group">
+                <label>Message</label> 
+                <textarea name="entry.535896028" class="form-control" rows="3" placeholder="How can we help?"></textarea>
+            </div>
 
-                <div class="form-group">
-                    <button type="submit" class="submitBtn" style="width:100%; padding: 12px; cursor:pointer; background-color: #004a99; color: white; border: none; border-radius: 4px; font-weight: bold;">
-                        Send Message
-                    </button>
-                </div>
-            </form>
+            <button type="submit" class="submitBtn">Send Message</button>
+        </form>
 
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-        </div>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
     </div>
 </div>
 
 <script type="text/javascript">
     function showSuccess() {
-        // Hide the form body
+        // This switch happens instantly when the button is clicked
         document.getElementById('form-body').style.display = 'none';
-        // Show the thank you message
         document.getElementById('thank-you-message').style.display = 'block';
+        return true; // Allows form to actually submit to the iframe
     }
 </script>
-
 		</div> <!-- .et_pb_section -->		</div><!-- .et_builder_inner_content -->
 	</div><!-- .et-l -->
 	
