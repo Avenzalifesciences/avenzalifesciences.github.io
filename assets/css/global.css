@@ -1,13 +1,35 @@
 /* =====================================
-   REMOVE HEADING ICONS SITE-WIDE
+   REMOVE HEADING ICONS + EXTRA SPACE
+   (DIVI / STATIC EXPORT SAFE)
    ===================================== */
-h1::before,
-h2::before,
-h3::before,
-h4::before,
-h5::before,
-h6::before {
+
+/* Kill icons */
+h1:before, h1::before,
+h2:before, h2::before,
+h3:before, h3::before,
+h4:before, h4::before,
+h5:before, h5::before,
+h6:before, h6::before {
   content: none !important;
   background: none !important;
   display: none !important;
+}
+
+/* Remove leftover spacing caused by icons */
+h1, h2, h3, h4, h5, h6 {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  text-indent: 0 !important;
+  transform: none !important;
+}
+
+/* Divi-specific heading containers */
+.et_pb_text h1,
+.et_pb_text h2,
+.et_pb_text h3,
+.et_pb_text h4,
+.et_pb_text h5,
+.et_pb_text h6 {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
