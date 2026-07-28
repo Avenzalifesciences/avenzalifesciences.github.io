@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
 <title>Trading System — Live Status</title>
 <style>
 :root {
@@ -83,7 +84,6 @@ header.top h1 {
 }
 .badge-paper::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--pending); }
 
-/* summary strip */
 .summary {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1px; background: var(--border); border: 1px solid var(--border);
@@ -103,7 +103,6 @@ section { margin-bottom: 44px; }
 .section-head h2 { font-size: 18px; font-weight: 700; margin: 0; letter-spacing: -0.005em; }
 .section-note { color: var(--text-muted); font-size: 13px; margin: 0; }
 
-/* positions */
 .pos-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 16px; }
 .pos-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
@@ -133,7 +132,6 @@ section { margin-bottom: 44px; }
 }
 .pos-grid dd { margin: 0; font-size: 13.5px; word-break: break-word; }
 
-/* pipeline explainer */
 .flow { list-style: none; margin: 0; padding: 0; position: relative; }
 .flow-step { display: grid; grid-template-columns: 32px 1fr; gap: 16px; padding-bottom: 24px; position: relative; }
 .flow-step:last-child { padding-bottom: 0; }
@@ -153,7 +151,6 @@ section { margin-bottom: 44px; }
   padding: 3px 9px; font-size: 11.5px; font-family: ui-monospace, monospace; color: var(--text);
 }
 
-/* tables */
 .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
 table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 th {
@@ -174,7 +171,6 @@ tr:last-child td { border-bottom: none; }
 .tag-put { background: var(--neg-soft); color: var(--neg); }
 .tag-other { background: var(--surface-2); color: var(--text-muted); }
 
-/* timeline */
 .timeline { list-style: none; margin: 0; padding: 0; border: 1px solid var(--border); border-radius: var(--radius);
   background: var(--surface); max-height: 460px; overflow-y: auto; }
 .step {
@@ -190,7 +186,6 @@ tr:last-child td { border-bottom: none; }
 .chip-ok { background: var(--pos-soft); color: var(--pos); }
 .chip-fail { background: var(--neg-soft); color: var(--neg); }
 
-/* reliability */
 .rel-bar { width: 140px; height: 8px; border-radius: 4px; background: var(--surface-2); overflow: hidden; }
 .rel-fill { height: 100%; }
 .rel-ok { background: var(--pos); }
@@ -226,7 +221,7 @@ footer {
     <div>
       <p class="eyebrow">Options Trading System</p>
       <h1>Live Status Snapshot</h1>
-      <p class="subtitle">Generated July 27, 2026 - 04:49 PM · account PA3V8SBOU67A</p>
+      <p class="subtitle">Generated July 27, 2026 - 08:36 PM · account PA3V8SBOU67A</p>
     </div>
     <span class="badge-paper">Paper trading — no real money at risk</span>
   </header>
@@ -346,8 +341,8 @@ footer {
         <div class="flow-body">
           <h3>Allocate capital by priority</h3>
           <p>Highest-confidence candidates get funded first. A reserve is always held back for a better
-             setup later, sector concentration is capped, and — as of today's fix — a symbol already
-             held won't get funded again.</p>
+             setup later, sector concentration is capped, and a symbol already held won't get funded
+             again.</p>
           <div class="params">
             <span class="param-chip">reserve held back: 25%</span>
             <span class="param-chip">max per sector: 2 positions</span>
@@ -376,8 +371,8 @@ footer {
           <p>Every open position is re-checked every 10 minutes, in this priority order: forced exit
              inside 1 day of expiration, conditional exit inside 4 days if no longer favorable, immediate
              exit if the entry signal reverses, stop-loss hit, then partial profit-taking at a trailing
-             target. As of today, nothing is marked closed or reduced until the closing order is
-             actually confirmed filled at the broker.</p>
+             target. Nothing is marked closed or reduced until the closing order is actually confirmed
+             filled at the broker.</p>
         </div>
       </li>
     </ol>
@@ -510,7 +505,7 @@ footer {
   <section>
     <div class="section-head">
       <h2>Recent Order Activity</h2>
-      <p class="section-note">Raw submission log — includes retries from a duplicate-buy bug fixed today</p>
+      <p class="section-note">Raw submission log</p>
     </div>
     <div class="table-wrap">
       <table>
@@ -741,11 +736,6 @@ footer {
       <h2>Stage Reliability — last 30 days</h2>
       <p class="section-note">42 of 61 steps succeeded today (69%)</p>
     </div>
-    <div class="callout">
-      <strong>Context on order_placement's rate below:</strong> most of the failed runs in this 30-day
-      window happened before today's fixes (non-optionable symbols, a broken order-side value) — those
-      failure modes are now closed off upstream, so this number should climb from here.
-    </div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Stage</th><th>Success rate</th><th></th><th>Sample</th></tr></thead>
@@ -817,8 +807,8 @@ footer {
   </section>
 
   <footer>
-    <span>Static snapshot — reflects data as of July 27, 2026 - 04:49 PM, not live-updating.</span>
-    <span>Ask for a refresh any time to regenerate with current data.</span>
+    <span>Generated July 27, 2026 - 08:36 PM · refreshes automatically after every order</span>
+    <span>Access restricted via Cloudflare</span>
   </footer>
 
 </div>
