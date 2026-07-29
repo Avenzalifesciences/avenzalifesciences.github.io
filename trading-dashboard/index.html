@@ -237,15 +237,15 @@ footer {
     </div>
     <div class="summary-cell">
       <p class="label">Buying Power</p>
-      <p class="value mono">$390,607.44</p>
+      <p class="value mono">$387,039.40</p>
     </div>
     <div class="summary-cell">
       <p class="label">Open Positions</p>
-      <p class="value">3</p>
+      <p class="value">4</p>
     </div>
     <div class="summary-cell">
       <p class="label">Today's Pipeline</p>
-      <p class="value">25<span class="dim" style="font-size:15px">/28 steps</span></p>
+      <p class="value">32<span class="dim" style="font-size:15px">/37 steps</span></p>
     </div>
   </div>
 
@@ -315,6 +315,27 @@ footer {
         <div><dt>Breakeven (underlying)</dt><dd><span class="dim">—</span></dd></div>
         <div><dt>Underlying entry</dt><dd>$47.42</dd></div>
         <div><dt>Stop-loss (underlying)</dt><dd>$51.99</dd></div>
+        <div><dt>Expires</dt><dd>2026-08-12 <span class="dim">(14d)</span></dd></div>
+      </dl>
+    </article>
+
+    <article class="pos-card">
+      <div class="pos-head">
+        <div class="pos-title">
+          <span class="pos-symbol">DRAM</span>
+          <span class="pos-type">PUT · $48.00 strike</span>
+        </div>
+        <span class="pill pill-pending">order submitted, not yet confirmed at broker</span>
+      </div>
+      <div class="pos-pl pos-pl-pending">No live position at the broker yet - this row is being watched, not actively stop-managed, until it resolves (filled, or removed if the order dies).</div>
+      <dl class="pos-grid">
+        <div><dt>Contract</dt><dd class="mono">DRAM260814P00048000</dd></div>
+        <div><dt>Contracts held</dt><dd>2</dd></div>
+        <div><dt>Premium paid</dt><dd><span class="dim">not yet filled</span></dd></div>
+        <div><dt>Current option price</dt><dd><span class="dim">—</span></dd></div>
+        <div><dt>Breakeven (underlying)</dt><dd><span class="dim">—</span></dd></div>
+        <div><dt>Underlying entry</dt><dd>$47.65</dd></div>
+        <div><dt>Stop-loss (underlying)</dt><dd>$52.22</dd></div>
         <div><dt>Expires</dt><dd>2026-08-12 <span class="dim">(14d)</span></dd></div>
       </dl>
     </article>
@@ -520,6 +541,14 @@ footer {
       <td class="mono dim">2026-07-29</td>
       <td class="mono strong">DRAM</td>
       <td><span class="tag tag-put">long put</span></td>
+      <td class="mono">$47.65</td>
+      <td class="dim small">contract=DRAM260814P00048000; Midpoint limit (ADX=28.0, no urgency - willing to wait for a fair fill); fill status: still_pending_after_timeout</td>
+    </tr>
+
+    <tr>
+      <td class="mono dim">2026-07-29</td>
+      <td class="mono strong">DRAM</td>
+      <td><span class="tag tag-put">long put</span></td>
       <td class="mono">$47.42</td>
       <td class="dim small">contract=DRAM260814P00047000; Midpoint limit (ADX=28.0, no urgency - willing to wait for a fair fill); fill status: still_pending_after_timeout</td>
     </tr>
@@ -590,6 +619,69 @@ footer {
     </div>
     <ul class="timeline">
       
+    <li class="step step-fail">
+      <span class="chip chip-fail">FAIL</span>
+      <span class="step-time mono dim">13:31:49</span>
+      <span class="step-stage">tripwire check</span> <span class="mono dim">[XOM]</span>
+      <span class="step-detail">[WIDE_SPREAD] 10.53% (threshold 1.0%)</span>
+    </li>
+
+    <li class="step ">
+      <span class="chip chip-ok">OK</span>
+      <span class="step-time mono dim">13:31:49</span>
+      <span class="step-stage">stop loss setup</span> <span class="mono dim">[DRAM]</span>
+      <span class="step-detail">initial_stop=$52.22032274518694</span>
+    </li>
+
+    <li class="step ">
+      <span class="chip chip-ok">OK</span>
+      <span class="step-time mono dim">13:31:49</span>
+      <span class="step-stage">order placement</span> <span class="mono dim">[DRAM]</span>
+      <span class="step-detail">DRAM260814P00048000; fill status: still_pending_after_timeout</span>
+    </li>
+
+    <li class="step ">
+      <span class="chip chip-ok">OK</span>
+      <span class="step-time mono dim">13:31:38</span>
+      <span class="step-stage">signal decision</span> <span class="mono dim">[COP]</span>
+      <span class="step-detail">no_trade</span>
+    </li>
+
+    <li class="step ">
+      <span class="chip chip-ok">OK</span>
+      <span class="step-time mono dim">13:31:34</span>
+      <span class="step-stage">signal decision</span> <span class="mono dim">[SNXX]</span>
+      <span class="step-detail">no_trade</span>
+    </li>
+
+    <li class="step ">
+      <span class="chip chip-ok">OK</span>
+      <span class="step-time mono dim">13:31:30</span>
+      <span class="step-stage">signal decision</span> <span class="mono dim">[JBLU]</span>
+      <span class="step-detail">no_trade</span>
+    </li>
+
+    <li class="step step-fail">
+      <span class="chip chip-fail">FAIL</span>
+      <span class="step-time mono dim">13:31:27</span>
+      <span class="step-stage">tripwire check</span> <span class="mono dim">[XOM]</span>
+      <span class="step-detail">[WIDE_SPREAD] 10.53% (threshold 1.0%)</span>
+    </li>
+
+    <li class="step ">
+      <span class="chip chip-ok">OK</span>
+      <span class="step-time mono dim">13:31:19</span>
+      <span class="step-stage">dashboard published</span>
+      
+    </li>
+
+    <li class="step ">
+      <span class="chip chip-ok">OK</span>
+      <span class="step-time mono dim">13:31:17</span>
+      <span class="step-stage">capital allocation</span>
+      <span class="step-detail">2 funded of 10</span>
+    </li>
+
     <li class="step ">
       <span class="chip chip-ok">OK</span>
       <span class="step-time mono dim">13:31:16</span>
@@ -694,76 +786,13 @@ footer {
       <span class="step-stage">order placement</span> <span class="mono dim">[MSTU(put leg)]</span>
       <span class="step-detail">Spread too wide (155.56% of mid price, limit is 15%) - contract too illiquid to trade safely.</span>
     </li>
-
-    <li class="step step-fail">
-      <span class="chip chip-fail">FAIL</span>
-      <span class="step-time mono dim">13:30:48</span>
-      <span class="step-stage">order placement</span> <span class="mono dim">[MSTU(call leg)]</span>
-      <span class="step-detail">Spread too wide (200.0% of mid price, limit is 15%) - contract too illiquid to trade safely.</span>
-    </li>
-
-    <li class="step ">
-      <span class="chip chip-ok">OK</span>
-      <span class="step-time mono dim">13:30:45</span>
-      <span class="step-stage">position monitor</span>
-      
-    </li>
-
-    <li class="step ">
-      <span class="chip chip-ok">OK</span>
-      <span class="step-time mono dim">13:30:37</span>
-      <span class="step-stage">signal decision</span> <span class="mono dim">[COP]</span>
-      <span class="step-detail">no_trade</span>
-    </li>
-
-    <li class="step ">
-      <span class="chip chip-ok">OK</span>
-      <span class="step-time mono dim">13:30:36</span>
-      <span class="step-stage">signal decision</span> <span class="mono dim">[MSTU]</span>
-      <span class="step-detail">straddle</span>
-    </li>
-
-    <li class="step ">
-      <span class="chip chip-ok">OK</span>
-      <span class="step-time mono dim">13:30:35</span>
-      <span class="step-stage">signal decision</span> <span class="mono dim">[SLB]</span>
-      <span class="step-detail">no_trade</span>
-    </li>
-
-    <li class="step ">
-      <span class="chip chip-ok">OK</span>
-      <span class="step-time mono dim">13:30:34</span>
-      <span class="step-stage">signal decision</span> <span class="mono dim">[REPL]</span>
-      <span class="step-detail">long_call</span>
-    </li>
-
-    <li class="step ">
-      <span class="chip chip-ok">OK</span>
-      <span class="step-time mono dim">13:30:33</span>
-      <span class="step-stage">signal decision</span> <span class="mono dim">[NOK]</span>
-      <span class="step-detail">no_trade</span>
-    </li>
-
-    <li class="step ">
-      <span class="chip chip-ok">OK</span>
-      <span class="step-time mono dim">13:30:33</span>
-      <span class="step-stage">signal decision</span> <span class="mono dim">[SOXL]</span>
-      <span class="step-detail">no_trade</span>
-    </li>
-
-    <li class="step ">
-      <span class="chip chip-ok">OK</span>
-      <span class="step-time mono dim">13:30:33</span>
-      <span class="step-stage">signal decision</span> <span class="mono dim">[SNXX]</span>
-      <span class="step-detail">no_trade</span>
-    </li>
     </ul>
   </section>
 
   <section>
     <div class="section-head">
       <h2>Stage Reliability — last 30 days</h2>
-      <p class="section-note">25 of 28 steps succeeded today (89%)</p>
+      <p class="section-note">32 of 37 steps succeeded today (86%)</p>
     </div>
     <div class="table-wrap">
       <table>
@@ -773,7 +802,7 @@ footer {
       <td class="mono strong">capital allocation</td>
       <td><div class="rel-bar"><div class="rel-fill rel-ok" style="width:100%"></div></div></td>
       <td class="mono rel-ok">100%</td>
-      <td class="dim mono">3 runs</td>
+      <td class="dim mono">4 runs</td>
     </tr>
 
     <tr>
@@ -787,7 +816,7 @@ footer {
       <td class="mono strong">dashboard published</td>
       <td><div class="rel-bar"><div class="rel-fill rel-ok" style="width:100%"></div></div></td>
       <td class="mono rel-ok">100%</td>
-      <td class="dim mono">3 runs</td>
+      <td class="dim mono">4 runs</td>
     </tr>
 
     <tr>
@@ -799,9 +828,9 @@ footer {
 
     <tr>
       <td class="mono strong">order placement</td>
-      <td><div class="rel-bar"><div class="rel-fill rel-bad" style="width:23%"></div></div></td>
-      <td class="mono rel-bad">23%</td>
-      <td class="dim mono">31 runs</td>
+      <td><div class="rel-bar"><div class="rel-fill rel-bad" style="width:25%"></div></div></td>
+      <td class="mono rel-bad">25%</td>
+      <td class="dim mono">32 runs</td>
     </tr>
 
     <tr>
@@ -829,21 +858,21 @@ footer {
       <td class="mono strong">signal decision</td>
       <td><div class="rel-bar"><div class="rel-fill rel-ok" style="width:99%"></div></div></td>
       <td class="mono rel-ok">99%</td>
-      <td class="dim mono">260 runs</td>
+      <td class="dim mono">263 runs</td>
     </tr>
 
     <tr>
       <td class="mono strong">stop loss setup</td>
       <td><div class="rel-bar"><div class="rel-fill rel-ok" style="width:100%"></div></div></td>
       <td class="mono rel-ok">100%</td>
-      <td class="dim mono">8 runs</td>
+      <td class="dim mono">9 runs</td>
     </tr>
 
     <tr>
       <td class="mono strong">tripwire check</td>
       <td><div class="rel-bar"><div class="rel-fill rel-bad" style="width:0%"></div></div></td>
       <td class="mono rel-bad">0%</td>
-      <td class="dim mono">29 runs</td>
+      <td class="dim mono">31 runs</td>
     </tr>
 
     <tr>
